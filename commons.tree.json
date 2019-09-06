@@ -10,10 +10,10 @@
     "gi": ".gitignore",
     "gi-temp": "Node",
     "rw": true,
-    "lightDepend": ['nodejs','express'],
+    "lightDepend": ["nodejs","express"],
     "prerender": "scss||sass",
     "frame": null
-  }
+  },
   "!tree--!arr": [
     "nodejs",
     "express",
