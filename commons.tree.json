@@ -1,36 +1,36 @@
 {
-  "import": "https://ryanwans.com?template=true&format=tree",
-  "template": "tree",
-  "uses": "node||vue",
-  "commons": {
-    "author": "Ryan Wans",
-    "version": "latest||stable",
-    "v": "(current=>1.0.9)",
-    "ok": "fbla-wd",
-    "gi": ".gitignore",
-    "gi-temp": "Node",
-    "rw": true,
-    "lightDepend": ["nodejs","express"],
-    "prerender": "scss||sass",
-    "frame": null
-  },
-  "!tree--!arr": [
-    "nodejs",
-    "express",
-    "cookie-parser||node-cookies",
-    "fs",
-    "multer",
-    "scss-loader",
-    "predefiner",
-    "tree-template",
-    "agiledb"
-  ],
-  "tree-template-dep": {
-    "assets": "./assets",
-    "src": "./src",
-    "components": null,
-    "views": null,
-    "dev": ".",
-    "dist": "../dist"
-  }
+	"import": "https://ryanwans.com?template=true&format=tree",
+	"template": "tree",
+	"uses": "node||vue",
+	"commons": {
+		"author": "Ryan Wans",
+		"version": "latest||stable",
+		"v": "(current=>1.0.9)",
+		"ok": "fbla-wd",
+		"gi": ".gitignore",
+		"gi-temp": "Node",
+		"rw": true,
+		"lightDepend": [ "nodejs", "express" ],
+		"prerender": "scss||sass",
+		"frame": null
+	},
+	"!tree--!arr": [
+		"nodejs",
+		"express",
+		"cookie-parser||node-cookies",
+		"fs",
+		"multer",
+		"scss-loader",
+		"predefiner",
+		"tree-template",
+		"agiledb"
+	],
+	"tree-template-dep": {
+		"assets": "./assets",
+		"src": "./src",
+		"components": null,
+		"views": null,
+		"dev": ".",
+		"dist": "../dist"
+	}
 }

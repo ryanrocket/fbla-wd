@@ -1,0 +1,27 @@
+{
+	"name": "fbla-wd",
+	"version": "1.0.9",
+	"description": "NONE",
+	"main": "server.js",
+	"scripts": {
+		"test": "nodemon server.js",
+		"serve": "nodemon server.js",
+		"build": "make build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ryanrocket/fbla-wd.git"
+	},
+	"author": "Ryan Wans",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ryanrocket/fbla-wd/issues"
+	},
+	"homepage": "https://github.com/ryanrocket/fbla-wd#readme",
+	"dependencies": {
+		"cookie-parser": "^1.4.4",
+		"express": "^4.17.1",
+		"fs": "0.0.1-security",
+		"nodemon": "^1.19.2"
+	}
+}
