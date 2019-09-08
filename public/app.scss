@@ -40,4 +40,23 @@ body {
 		margin-right: 30px;
 	}
 	font-family: 'Open Sans', sans-serif !important;
+
+	[foot] {
+		/* css rhymes with "makes me depressed" */
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 70px;
+		background: rgb(65, 64, 64);
+		box-shadow: 0 6px 6px 8px #999;
+		.icon {
+			color: rgb(230, 230, 230);
+			width: 30px !important;
+			height: 30px !important;
+			padding-top: 18px;
+			padding-left: 18px;
+			margin-right: 12px;
+		}
+	}
 }
+/* responsive?? (laughing emoji) more like barely usable! */

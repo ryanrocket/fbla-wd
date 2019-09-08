@@ -11,3 +11,9 @@ build:
 
 dev:
 	nodemon server.js 
+
+purge:
+	rm -rf ./temp
+	rm -rf ./node_module
+	touch output.pid
+	echo "Purged Temp Files (+ Node Packaged)" >> ./output.pid
