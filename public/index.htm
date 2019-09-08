@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <base href="/">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/static/favicon.ico">
         <title>Monarch Airlines</title>
         <meta name="title" content="Monarch Airlines" />
         <meta name="description" content=" FBLA Web Design Competition Entry" />
@@ -22,17 +22,33 @@
         <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
         <script src='/api/templater.js'></script>
         <!-- HeaderSetter > CSS Libraries -->
+        <style lang="scss" scoped sass>
+            
+        </style>
+        <link rel='stylesheet' href='/api/app.scss' />
+        <link rel='stylesheet' href='/api/app.css.map' />
+        <link rel='stylesheet' href='/api/app.css' />
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css' />
-        <link rel='stylesheet' href='/api/APPLICATION_SCSS' />
         <!---->
         <script templater>
             // Push Content Load for Future Reference If Needed
             window.templater = window.templater || [];
             window.templater.push({"DOMContentLoad": Date.now()});
+
         </script>
     </head>
     <body>
-        <div id="app"></div>
+        <div wrapper>
+            <div id="nav"></div>
+        </div>
+        <script>
+            // Enforce Templater to run
+            TEMP.add("/view/nav.htm", "#nav");
+            TEMP.repl();
+            TEMP.created(function() {
+                AOS.init();
+            });
+        </script>
     </body>
 </html>

@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "nodemon server.js",
 		"serve": "nodemon server.js",
-		"build": "make build"
+		"build": "make build",
+		"scss": "node-sass --watch public -o css"
 	},
 	"repository": {
 		"type": "git",
@@ -23,6 +24,7 @@
 		"cookie-parser": "^1.4.4",
 		"express": "^4.17.1",
 		"fs": "0.0.1-security",
+		"node-sass": "^4.12.0",
 		"nodemon": "^1.19.2",
 		"path": "^0.12.7"
 	}

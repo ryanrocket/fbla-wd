@@ -37,13 +37,39 @@ lib['app'].use(function(req, res, next) {
 });
 
 lib['app'].get('/', function(req, res) {
-	res.sendFile('./public/index.html', { root: __dirname });
+	res.sendFile('./public/index.htm', { root: __dirname });
 });
-lib['app'].get('/api/APPLICATION_SCSS', function(req, res) {
+lib['app'].get('/api/app.scss', function(req, res) {
 	res.sendFile('./public/app.scss', { root: __dirname });
+});
+lib['app'].get('/api/app.css.map', function(req, res) {
+	res.sendFile('./public/app.css.map', { root: __dirname });
+});
+lib['app'].get('/api/app.css', function(req, res) {
+	res.sendFile('./public/app.css', { root: __dirname });
 });
 lib['app'].get('/api/templater.js', function(req, res) {
 	res.sendFile('./assets/templater.js', { root: __dirname });
+});
+lib['app'].get('/api/void.ts', function(req, res) {
+	res.sendFile('./assets/void.ts', { root: __dirname });
+});
+
+lib['app'].get('/view/*', function(req, res) {
+	let a = req.path.split('/')[2];
+	try {
+		res.sendFile('./views/' + a, { root: __dirname });
+	} catch (e) {
+		res.end(rwportal(404));
+	}
+});
+lib['app'].get('/static/*', function(req, res) {
+	let a = req.path.split('/')[2];
+	try {
+		res.sendFile('./static/' + a, { root: __dirname });
+	} catch (e) {
+		res.end(rwportal(404));
+	}
 });
 
 // 404 handlr
