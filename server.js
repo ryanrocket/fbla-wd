@@ -31,14 +31,14 @@ try {
 	throw new Error('Plugin Install Incomplete!');
 }
 
+lib['app'].use(lib['cookie-parser']());
+
 // universal
 lib['app'].use(function(req, res, next) {
+	res.cookie('_stmp', Date.now());
 	next();
 });
 
-lib['app'].get('/', function(req, res) {
-	res.sendFile('./public/index.htm', { root: __dirname });
-});
 lib['app'].get('/api/app.scss', function(req, res) {
 	res.sendFile('./public/app.scss', { root: __dirname });
 });
@@ -74,7 +74,7 @@ lib['app'].get('/static/*', function(req, res) {
 
 // 404 handlr
 lib['app'].get('/*', function(req, res) {
-	res.end(rwportal(404));
+	res.sendFile('./public/index.htm', { root: __dirname });
 });
 
 lib['app'].listen(9000, () => {

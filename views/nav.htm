@@ -1,4 +1,5 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar">
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar">
     <a class="navbar-brand brand" href="/">
         <img src="/static/monarchlogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         <span class="logodeclare"> Monarch Airlines</span>
@@ -8,10 +9,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/">Features</a>
+            <a class="nav-item / nav-link" href="">Home </a>
+            <a class="nav-item /features nav-link" href="/features">Features</a>
             <a class="nav-item nav-link" href="/">Pricing</a>
             <a class="nav-item nav-link disabled" href="/">Disabled</a>
         </div>
     </div>
+    <script active>
+        var pages = ['/', '', '/features'];
+        if(pages.includes(window.location.pathname)) {
+            let DOMJU = document.querySelector(window.localStorage.pathname)
+            DOMJU.classList.add("active");
+        }
+    </script>
 </nav>
+</div>

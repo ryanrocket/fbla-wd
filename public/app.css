@@ -15,6 +15,26 @@
   font-style: italic;
 }
 
+[wrapper] {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+a:link:active {
+  color: black !important;
+}
+
+#aa {
+  color: #d3d1d1 !important;
+}
+
+#aa:hover {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
 html,
 head,
 body {
@@ -25,6 +45,8 @@ body {
   height: 100%;
   background: #eff1f1 !important;
   color: #1f1e1e;
+  overflow-x: hidden;
+  overflow-y: hidden;
   font-family: 'Open Sans', sans-serif !important;
 }
 
@@ -50,13 +72,20 @@ body .brand {
   margin-right: 30px;
 }
 
+html #foot,
+head #foot,
+body #foot {
+  width: 100%;
+}
+
 html [foot],
 head [foot],
 body [foot] {
   /* css rhymes with "makes me depressed" */
   position: absolute;
-  bottom: 0;
+  bottom: 0 !important;
   width: 100%;
+  top: 91.5%;
   height: 70px;
   background: #414040;
   -webkit-box-shadow: 0 6px 6px 8px #999;
@@ -72,6 +101,83 @@ body [foot] .icon {
   padding-top: 18px;
   padding-left: 18px;
   margin-right: 12px;
+}
+
+html [foot] [joblist],
+head [foot] [joblist],
+body [foot] [joblist] {
+  color: #d3d1d1;
+  padding-top: 24px;
+  padding-right: 18px;
+  margin-left: 12px;
+  right: 0;
+  float: right;
+}
+
+html [foot] #gone,
+head [foot] #gone,
+body [foot] #gone {
+  visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+  html [foot] #gone,
+  head [foot] #gone,
+  body [foot] #gone {
+    visibility: hidden;
+  }
+}
+
+html #tc,
+head #tc,
+body #tc {
+  width: 100%;
+  height: 81vh;
+  padding: 20px;
+  position: relative;
+  overflow: scroll;
+}
+
+html #nav,
+head #nav,
+body #nav {
+  width: 100%;
+  height: auto;
+}
+
+html .twitter:hover,
+head .twitter:hover,
+body .twitter:hover {
+  color: #4aa0eb;
+  text-decoration: none !important;
+}
+
+html .linked:hover,
+head .linked:hover,
+body .linked:hover {
+  color: #367fbb;
+  text-decoration: none !important;
+}
+
+html .fb:hover,
+head .fb:hover,
+body .fb:hover {
+  color: #4967ad;
+  text-decoration: none !important;
+}
+
+html .snapchat:hover,
+head .snapchat:hover,
+body .snapchat:hover {
+  color: #fffc00;
+  text-decoration: none !important;
+}
+
+html .instagram:hover,
+head .instagram:hover,
+body .instagram:hover {
+  color: #e1306c;
+  text-decoration: none !important;
 }
 
 /* responsive?? (laughing emoji) more like barely usable! */
