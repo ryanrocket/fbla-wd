@@ -237,5 +237,15 @@ body #logo .scream {
   text-shadow: 0px 0px 8px #a09e9e;
 }
 
+html .book,
+head .book,
+body .book {
+  width: 20rem;
+  background: white;
+  padding-top: 900px;
+  position: absolute;
+  text-align: center;
+}
+
 /* responsive?? (laughing emoji) more like barely usable! */
 /*# sourceMappingURL=app.css.map */
