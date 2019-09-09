@@ -6,6 +6,8 @@
     LIGHTWEIGHT VERSION
 */
 
+window.templater = window.templater || [];
+
 const TEMP = {
 	eventQue: {},
 	upperContent: {},
@@ -50,6 +52,7 @@ const TEMP = {
 				c;
 			for (c = 0; c < b.length; c++) {
 				b[c].innerHTML = a[i][0];
+				window.templater.push(a[i][1]);
 			}
 		}
 	},

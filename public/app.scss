@@ -99,7 +99,9 @@ body {
 	#tc {
 		width: 100%;
 		height: 81vh;
-		padding: 20px;
+		padding-top: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
 		position: relative;
 		overflow: scroll;
 	}
@@ -126,6 +128,40 @@ body {
 	.instagram:hover {
 		color: #e1306c;
 		text-decoration: none !important;
+	}
+	#logo {
+		width: 100%;
+		height: 80%;
+		text-align: center;
+		left: 0;
+		#llogo {
+			float: left;
+			margin-right: 30px;
+		}
+		#lh {
+			font-size: 3.8rem;
+			font-weight: 300;
+			padding-top: 15px;
+			margin-left: 15px;
+		}
+		#fp {
+			@media screen and (min-width: 1030px) {
+				border-radius: 8px;
+				background: linear-gradient(to bottom, white, transparent 60%);
+			}
+			@media screen and (max-width: 1029px) {
+				visibility: hidden;
+			}
+		}
+		.scream {
+			position: absolute;
+			text-align: left;
+			color: white;
+			top: 4rem;
+			font-size: 2.8rem;
+			left: 15rem;
+			text-shadow: 0px 0px 8px #a09e9e;
+		}
 	}
 }
 /* responsive?? (laughing emoji) more like barely usable! */
