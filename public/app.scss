@@ -38,6 +38,7 @@ html,
 head,
 body {
 	margin: 0;
+	scroll-behavior: smooth;
 	padding: 0;
 	border: 0;
 	width: 100%;
@@ -46,6 +47,7 @@ body {
 	color: #1f1e1e;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	overflow: hidden;
 	.logodeclare {
 		font-weight: 300;
 		padding-left: 12px;
@@ -150,7 +152,9 @@ body {
 				background: linear-gradient(to bottom, white, transparent 60%);
 			}
 			@media screen and (max-width: 1029px) {
-				visibility: hidden;
+				width: 100% !important;
+				height: auto;
+				border-radius: 8px;
 			}
 		}
 		.scream {
@@ -164,11 +168,85 @@ body {
 		}
 	}
 	.book {
-		width: 20rem;
-		background: white;
-		padding-top: 900px;
-		position: absolute;
+		width: 100%;
+		padding-top: 800px;
 		text-align: center;
+		position: absolute;
+		top: 0;
+		background: white;
+		.bmain {
+			background: white;
+			position: absolute;
+		}
+	}
+	.owner {
+		width: 100%;
+		position: absolute;
+		bottom: 10px;
+		.downer {
+			width: 100%;
+			position: absolute;
+			color: darkgray;
+			opacity: 0.6;
+			bottom: 0px;
+			text-align: center;
+		}
+		#sm {
+			width: 100%;
+			position: absolute;
+			color: darkgray;
+			opacity: 0.6;
+			bottom: 30px;
+			text-align: center;
+		}
+	}
+	.food {
+		@media screen and (min-width: 1150px) {
+			width: 97%;
+			position: absolute;
+			height: 100%;
+			text-align: center;
+			top: 400px;
+			.menu {
+				border-radius: 10px;
+				width: 80%;
+				height: 100%;
+				background: white;
+				text-align: center;
+				position: absolute;
+				margin-left: 10%;
+				box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
+			}
+		}
+		@media screen and (max-width: 1149px) {
+			visibility: hidden;
+		}
+		margin-bottom: 25px;
+	}
+	.foodmobile {
+		@media screen and (min-width: 1150px) {
+			visibility: hidden;
+		}
+		@media screen and (max-width: 1149px) {
+			width: 100%;
+			margin-top: 35px;
+			text-align: center;
+			[mbut] {
+				width: 150px;
+				height: 70px;
+				background-color: grey;
+				color: white;
+				border-radius: 8px;
+				#first {
+					float: right;
+					margin-right: 20px;
+				}
+			}
+			[mbut]:hover {
+				text-decoration: none !important;
+				font-weight: bold;
+			}
+		}
 	}
 }
 /* responsive?? (laughing emoji) more like barely usable! */
