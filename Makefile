@@ -17,3 +17,9 @@ purge:
 	rm -rf ./node_module
 	touch output.pid
 	echo "Purged Temp Files (+ Node Packaged)" >> ./output.pid
+
+commit-beta:
+	git add -A 
+	git commit -m "unsigned commit"
+	git push origin master:beta
+	echo "\n\nCommit Complete!\n\n"

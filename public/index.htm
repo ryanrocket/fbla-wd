@@ -39,15 +39,29 @@
 
         </script>
     </head>
-    <body>
+    <body scroll="no">
         <div wrapper>
             <div id="nav"></div>
+            <div id="tc"></div>
+            <br><br><br>
             <div id="foot"></div>
         </div>
         <script>
             // Enforce Templater to run
             TEMP.add("/view/nav.htm", "#nav");
             TEMP.add("/view/foot.htm", "#foot");
+                (window.location.pathname === "/" 
+                || window.location.pathname === "")
+                    ? (function() {
+                        TEMP.add("/view/home.htm", "#tc");
+                    })()
+                    : (function() {
+                        TEMP.add("/view"+
+                        window.location.pathname+
+                        ".htm", "#tc");
+                        TEMP.gTitle("Monarch - ");
+                    })()
+
             TEMP.repl();
             TEMP.created(function() {
                 AOS.init();

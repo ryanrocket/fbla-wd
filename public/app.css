@@ -15,16 +15,40 @@
   font-style: italic;
 }
 
+[wrapper] {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+a:link:active {
+  color: black !important;
+}
+
+#aa {
+  color: #d3d1d1 !important;
+}
+
+#aa:hover {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
 html,
 head,
 body {
   margin: 0;
+  scroll-behavior: smooth;
   padding: 0;
   border: 0;
   width: 100%;
   height: 100%;
   background: #eff1f1 !important;
   color: #1f1e1e;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
   font-family: 'Open Sans', sans-serif !important;
 }
 
@@ -42,6 +66,7 @@ body .navbar {
   -webkit-box-shadow: 0 6px 6px -6px #999;
           box-shadow: 0 6px 6px -6px #999;
   width: 100%;
+  z-index: 30000;
 }
 
 html .brand,
@@ -50,17 +75,28 @@ body .brand {
   margin-right: 30px;
 }
 
+html #foot,
+head #foot,
+body #foot {
+  width: 100%;
+  top: 100%;
+  margin-top: 20px;
+}
+
 html [foot],
 head [foot],
 body [foot] {
   /* css rhymes with "makes me depressed" */
   position: absolute;
-  bottom: 0;
+  bottom: 0 !important;
   width: 100%;
+  top: 91.5%;
   height: 70px;
   background: #414040;
   -webkit-box-shadow: 0 6px 6px 8px #999;
           box-shadow: 0 6px 6px 8px #999;
+  z-index: 200;
+  border-top: 20px;
 }
 
 html [foot] .icon,
@@ -72,6 +108,424 @@ body [foot] .icon {
   padding-top: 18px;
   padding-left: 18px;
   margin-right: 12px;
+}
+
+html [foot] [joblist],
+head [foot] [joblist],
+body [foot] [joblist] {
+  color: #d3d1d1;
+  padding-top: 24px;
+  padding-right: 18px;
+  margin-left: 12px;
+  right: 0;
+  float: right;
+}
+
+html [foot] #gone,
+head [foot] #gone,
+body [foot] #gone {
+  visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+  html [foot] #gone,
+  head [foot] #gone,
+  body [foot] #gone {
+    visibility: hidden;
+  }
+}
+
+html #tc,
+head #tc,
+body #tc {
+  width: 100%;
+  height: 85%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: scroll;
+  margin-bottom: 60px;
+  border-bottom: 20px;
+}
+
+html #nav,
+head #nav,
+body #nav {
+  width: 100%;
+  height: auto;
+}
+
+html .twitter:hover,
+head .twitter:hover,
+body .twitter:hover {
+  color: #4aa0eb;
+  text-decoration: none !important;
+}
+
+html .linked:hover,
+head .linked:hover,
+body .linked:hover {
+  color: #367fbb;
+  text-decoration: none !important;
+}
+
+html .fb:hover,
+head .fb:hover,
+body .fb:hover {
+  color: #4967ad;
+  text-decoration: none !important;
+}
+
+html .snapchat:hover,
+head .snapchat:hover,
+body .snapchat:hover {
+  color: #fffc00;
+  text-decoration: none !important;
+}
+
+html .instagram:hover,
+head .instagram:hover,
+body .instagram:hover {
+  color: #e1306c;
+  text-decoration: none !important;
+}
+
+html #logo,
+head #logo,
+body #logo {
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  left: 0;
+}
+
+html #logo #llogo,
+head #logo #llogo,
+body #logo #llogo {
+  float: left;
+  margin-right: 30px;
+}
+
+html #logo #lh,
+head #logo #lh,
+body #logo #lh {
+  font-size: 3.8rem;
+  font-weight: 300;
+  padding-top: 15px;
+  margin-left: 15px;
+}
+
+html #logo #fp,
+head #logo #fp,
+body #logo #fp {
+  border-style: solid;
+  border-color: gray;
+  border-width: 0px;
+}
+
+@media screen and (min-width: 1030px) {
+  html #logo #fp,
+  head #logo #fp,
+  body #logo #fp {
+    border-radius: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(60%, transparent));
+    background: linear-gradient(to bottom, white, transparent 60%);
+  }
+}
+
+@media screen and (max-width: 1029px) {
+  html #logo #fp,
+  head #logo #fp,
+  body #logo #fp {
+    width: 100% !important;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+html #logo .scream,
+head #logo .scream,
+body #logo .scream {
+  position: absolute;
+  text-align: left;
+  color: white;
+  top: 4rem;
+  font-size: 2.8rem;
+  left: 15rem;
+  text-shadow: 0px 0px 8px #a09e9e;
+}
+
+html .book,
+head .book,
+body .book {
+  width: 100%;
+  padding-top: 800px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  background: white;
+}
+
+html .book .bmain,
+head .book .bmain,
+body .book .bmain {
+  background: white;
+  position: absolute;
+}
+
+html .owner,
+head .owner,
+body .owner {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+html .owner .downer,
+head .owner .downer,
+body .owner .downer {
+  width: 100%;
+  position: absolute;
+  color: darkgray;
+  opacity: 0.6;
+  bottom: 0px;
+  text-align: center;
+}
+
+html .owner #sm,
+head .owner #sm,
+body .owner #sm {
+  width: 100%;
+  position: absolute;
+  color: darkgray;
+  opacity: 0.6;
+  bottom: 30px;
+  text-align: center;
+}
+
+html .food,
+head .food,
+body .food {
+  z-index: 200;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 1150px) {
+  html .food,
+  head .food,
+  body .food {
+    width: 97%;
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    top: 375px;
+  }
+  html .food .menu,
+  head .food .menu,
+  body .food .menu {
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    background: white;
+    text-align: center;
+    position: absolute;
+    margin-left: 10%;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+  }
+  html .food .menu [dinertable],
+  head .food .menu [dinertable],
+  body .food .menu [dinertable] {
+    width: 100%;
+    height: 60px;
+    background: #4f9fef;
+    top: 0;
+    opacity: 0.8;
+    z-index: 3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  html .food .menu [dinertable] [flager],
+  head .food .menu [dinertable] [flager],
+  body .food .menu [dinertable] [flager] {
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    float: left;
+  }
+  html .food .menu [dinertable] [botter],
+  head .food .menu [dinertable] [botter],
+  body .food .menu [dinertable] [botter] {
+    font-size: 1.7rem;
+    color: white;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    float: right;
+  }
+  html .food .menu [booker],
+  head .food .menu [booker],
+  body .food .menu [booker] {
+    width: 100%;
+    height: 95px;
+    padding: 8px;
+  }
+  html .food .menu [booker] [abover],
+  head .food .menu [booker] [abover],
+  body .food .menu [booker] [abover] {
+    text-align: left;
+  }
+  html .food .menu [booker] [abover] .nc,
+  head .food .menu [booker] [abover] .nc,
+  body .food .menu [booker] [abover] .nc {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+  }
+  html .food .menu [booker] [opt],
+  head .food .menu [booker] [opt],
+  body .food .menu [booker] [opt] {
+    width: 120px;
+    height: 65px;
+    margin-top: 6px;
+  }
+  html .food .menu [booker] [opt] [opti],
+  head .food .menu [booker] [opt] [opti],
+  body .food .menu [booker] [opt] [opti] {
+    color: gray;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 4px;
+    margin-bottom: 4px;
+  }
+  html .food .menu [booker] [opt] [selr],
+  head .food .menu [booker] [opt] [selr],
+  body .food .menu [booker] [opt] [selr] {
+    background: #ececec;
+    width: 100%;
+    height: 75%;
+    top: 0;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border-style: solid;
+    border-width: 1px;
+  }
+  html .food .menu [booker] [optf],
+  head .food .menu [booker] [optf],
+  body .food .menu [booker] [optf] {
+    float: left;
+  }
+  html .food .menu [booker] [fr],
+  head .food .menu [booker] [fr],
+  body .food .menu [booker] [fr] {
+    float: left;
+    margin-left: 20px;
+  }
+  html .food .menu [booker] [dtr],
+  head .food .menu [booker] [dtr],
+  body .food .menu [booker] [dtr] {
+    width: 170px !important;
+  }
+  html .food .menu [booker] [dtrf],
+  head .food .menu [booker] [dtrf],
+  body .food .menu [booker] [dtrf] {
+    width: 150px !important;
+  }
+  html .food .menu [booker] [fl],
+  head .food .menu [booker] [fl],
+  body .food .menu [booker] [fl] {
+    float: right;
+    width: 100px !important;
+  }
+  html .food .menu [booker] [fl] [opti],
+  head .food .menu [booker] [fl] [opti],
+  body .food .menu [booker] [fl] [opti] {
+    text-align: right;
+    padding-right: 4px;
+  }
+  html .food .menu [elp],
+  head .food .menu [elp],
+  body .food .menu [elp] {
+    width: 100%;
+    height: 15px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: -8px;
+    margin-top: -8px;
+  }
+  html .food .menu [elp] .fabb,
+  head .food .menu [elp] .fabb,
+  body .food .menu [elp] .fabb {
+    color: gray;
+  }
+  html .food .menu [elp] [ghelp],
+  head .food .menu [elp] [ghelp],
+  body .food .menu [elp] [ghelp] {
+    padding-right: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1149px) {
+  html .food,
+  head .food,
+  body .food {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  html .foodmobile,
+  head .foodmobile,
+  body .foodmobile {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1149px) {
+  html .foodmobile,
+  head .foodmobile,
+  body .foodmobile {
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
+  }
+  html .foodmobile [mbut],
+  head .foodmobile [mbut],
+  body .foodmobile [mbut] {
+    width: 150px;
+    height: 70px;
+    background-color: grey;
+    color: white;
+    border-radius: 8px;
+  }
+  html .foodmobile [mbut] #first,
+  head .foodmobile [mbut] #first,
+  body .foodmobile [mbut] #first {
+    float: right;
+    margin-right: 20px;
+  }
+  html .foodmobile [mbut]:hover,
+  head .foodmobile [mbut]:hover,
+  body .foodmobile [mbut]:hover {
+    text-decoration: none !important;
+    font-weight: bold;
+  }
 }
 
 /* responsive?? (laughing emoji) more like barely usable! */

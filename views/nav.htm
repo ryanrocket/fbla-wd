@@ -1,6 +1,7 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar">
+<div>
+<nav class="navbar navbar-expand-lg navbar-light fixed bg-light navbar">
     <a class="navbar-brand brand" href="/">
-        <img src="/static/monarchlogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="/static/monarchlogo.png" width="35" height="30" class="d-inline-block align-top" alt="">
         <span class="logodeclare"> Monarch Airlines</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +9,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/">Features</a>
-            <a class="nav-item nav-link" href="/">Pricing</a>
-            <a class="nav-item nav-link disabled" href="/">Disabled</a>
+            <a class="nav-item / nav-link" href="">Home </a>
+            <a class="nav-item /features nav-link" href="/book">Book</a>
+            <a class="nav-item nav-link" href="/locations">Locations</a>
+            <a class="nav-item nav-link" href="/rewards">Rewards</a>
+            <a class="nav-item nav-link" href="/careers">Careers</a>
         </div>
     </div>
+    <script active>
+        var pages = ['/', '', '/features'];
+        if(pages.includes(window.location.pathname)) {
+            let DOMJU = document.querySelector(window.localStorage.pathname)
+            DOMJU.classList.add("active");
+        }
+    </script>
 </nav>
+</div>
