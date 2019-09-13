@@ -23,3 +23,6 @@ commit-beta:
 	git commit -m "unsigned commit"
 	git push origin master:beta
 	echo "\n\nCommit Complete!\n\n"
+
+version:
+	# Node Project FBLA-WD Version ~1.0.3
