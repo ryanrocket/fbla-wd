@@ -1,3 +1,4 @@
+// Ryan Wans (C) 2019
 let a = require('../');
 function hook(b, c, d, e) {
 	try {

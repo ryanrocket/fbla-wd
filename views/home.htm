@@ -20,33 +20,35 @@
                     </div>
                     <div opt optf>
                         <h3 opti>DEPARTURE</h3>
-                        <input type="text" maxlength="3" selr>
-
+                        <input type="text" name="dep" id="depart" maxlength="10" selr>
+                        <div class="$(unique-result)" single-result data-index="$(i)"> $(name) $(IATA) </br> $(city) ,$(country)</div>
                         </input>
                     </div>
                     <div opt fr>
                         <h3 opti>ARRIVE</h3>
-                        <input type="text" maxlength="3" selr>
+                        <input type="text" name="arr" id="arrive" maxlength="10" selr>
 
                         </input>
                     </div>
                     <div opt fr dtrf>
                         <h3 opti>DATE SELECTOR</h3>
+                        <input type="text" name="date" id="datepicker" selr>
                     </div>
                     <div opt fr>
                         <h3 opti>PASSENGERS</h3>
-                        <input type="number" maxlength="1" max="9" selr>
+                        <input type="number" name="pass" maxlength="1" max="9" selr>
 
                         </input>
                     </div>
                     <div opt fr dtr>
                         <h3 opti>PROMO CODE</h3>
-                        <input type="text" maxlength="8" selr>
+                        <input type="text" name="promo" maxlength="8" selr>
 
                         </input>
                     </div>
                     <div opt fl>
                             <h3 opti>BOOK FLIGHT</h3>
+                            <button type="submit" subm>BOOK</button>
                         </div>
                 </form>
             </div>
@@ -76,5 +78,13 @@
     </div>
     -->
     <br><br><br>
+    <script app>
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                multidate: true
+            });
+            console['warn']("${#datepicker}");
+        } );
+    </script>
 </div>
 <br><br><br><br>

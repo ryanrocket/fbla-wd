@@ -6,7 +6,7 @@ commit:
 
 build:
 	nohup node server.js & disown;
-	kill %1
+	echo ^c
 	echo "\n-> Build Completed!\n\n"
 
 dev:
