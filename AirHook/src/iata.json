@@ -1,0 +1,87 @@
+[
+	{
+		"city": "Tampa",
+		"iata": "TPA",
+		"state": "Florida"
+	},
+	{
+		"city": "Richmond",
+		"iata": "RIC",
+		"state": "Virginia"
+	},
+	{
+		"city": "Raleigh",
+		"iata": "RDU",
+		"state": "North Carolina"
+	},
+	{
+		"city": "Pittsburgh",
+		"iata": "PIT",
+		"state": "Pennsylvania"
+	},
+	{
+		"city": "Philadelphia",
+		"iata": "PHL",
+		"state": "Pennsylvania"
+	},
+	{
+		"city": "Newark",
+		"iata": "EWR",
+		"state": "New Jersey"
+	},
+	{
+		"city": "New York",
+		"iata": "LGA",
+		"state": "New York"
+	},
+	{
+		"city": "New York",
+		"iata": "JFK",
+		"state": "New York"
+	},
+	{
+		"city": "Miami",
+		"iata": "MIA",
+		"state": "Florida"
+	},
+	{
+		"city": "Jacksonville",
+		"iata": "JAX",
+		"state": "Florida"
+	},
+	{
+		"city": "Columbia",
+		"iata": "CAE",
+		"state": "South Carolina"
+	},
+	{
+		"city": "Charlotte",
+		"iata": "CLT",
+		"state": "North Carolina"
+	},
+	{
+		"city": "Boston",
+		"iata": "BOS",
+		"state": "Massachusetts"
+	},
+	{
+		"city": "Baltimore",
+		"iata": "BWI",
+		"state": "Maryland"
+	},
+	{
+		"city": "Atlanta",
+		"iata": "ATL",
+		"state": "Georgia"
+	},
+	{
+		"city": "Washington",
+		"iata": "DCA",
+		"state": "Virginia"
+	},
+	{
+		"city": "Washington",
+		"iata": "IAD",
+		"state": "Virginia"
+	}
+]
