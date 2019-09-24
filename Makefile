@@ -1,3 +1,5 @@
+LIGHT_OUTPUT = ./nohup.out
+
 commit:
 	git add -A 
 	git commit -m "${message}"
@@ -20,9 +22,17 @@ purge:
 
 commit-beta:
 	git add -A 
-	git commit -m ${message}
+	git commit -m "${message}"
 	git push origin master:beta
 	echo "\n\nCommit Complete!\n\n"
 
 version:
 	# Node Project FBLA-WD Version ~1.0.3
+
+.PHONY: clean
+
+clean:
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+
+$(ODIR)/%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
