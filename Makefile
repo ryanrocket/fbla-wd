@@ -1,6 +1,6 @@
 commit:
 	git add -A 
-	git commit -m "unsigned commit"
+	git commit -m "${message}"
 	git push origin master
 	echo "\n\nCommit Complete!\n\n"
 
