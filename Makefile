@@ -1,7 +1,7 @@
 LIGHT_OUTPUT = ./nohup.out
 
 commit:
-	if [${message} == "" || ${message} == null]
+	if [-z ${message}]
 	then
 		@echo "Please provide a message=\"message\""
 	else
