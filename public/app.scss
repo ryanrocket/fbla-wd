@@ -273,6 +273,28 @@ body {
 							font-weight: bold;
 						}
 					}
+					[ad-left] {
+						bottom: 0;
+						position: absolute;
+						width: 50%;
+						background: red;
+						left: 0;
+						height: 200px;
+						border-style: solid;
+						border-width: 1px;
+						border-color: grey;
+					}
+					[ad-right] {
+						bottom: 0;
+						position: absolute;
+						width: 50%;
+						background: blue;
+						right: 0;
+						height: 200px;
+						border-style: solid;
+						border-width: 1px;
+						border-color: grey;
+					}
 					[opt] {
 						width: 120px;
 						height: 65px;
