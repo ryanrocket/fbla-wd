@@ -1,4 +1,7 @@
 LIGHT_OUTPUT = ./nohup.out
+CUR_DIR = ./
+DIST = ./dist
+DB = ./dist/monarch.db.json
 
 commit:
 	if [-z ${message}]
@@ -6,10 +9,16 @@ commit:
 		@echo "Please provide a message=\"message\""
 	else
 		git add -A 
-		git commit -m "${message}"
+		git commit -m "MAKE: ${message}"
 		git push origin master
 		@echo "\n\nCommit Complete!\n\n"
 	fi
+	
+leg-commit:
+	git add -A
+	git commit -m "MAKE: ${message}"
+	git push origin master
+	@echo "Completed Commit"
 
 build:
 	nohup node server.js & disown;
@@ -41,3 +50,4 @@ clean:
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
+
