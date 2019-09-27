@@ -216,9 +216,10 @@ body {
 		@media screen and (min-width: 1150px) {
 			width: 97%;
 			position: absolute;
-			height: 100%;
+			height: 77.5%;
 			text-align: center;
 			top: 375px;
+			margin-bottom: 40px;
 			.menu {
 				border-radius: 10px;
 				width: 80%;
@@ -273,28 +274,7 @@ body {
 							font-weight: bold;
 						}
 					}
-					[ad-left] {
-						bottom: 0;
-						position: absolute;
-						width: 50%;
-						background: red;
-						left: 0;
-						height: 200px;
-						border-style: solid;
-						border-width: 1px;
-						border-color: grey;
-					}
-					[ad-right] {
-						bottom: 0;
-						position: absolute;
-						width: 50%;
-						background: blue;
-						right: 0;
-						height: 200px;
-						border-style: solid;
-						border-width: 1px;
-						border-color: grey;
-					}
+
 					[opt] {
 						width: 120px;
 						height: 65px;
@@ -316,6 +296,7 @@ body {
 							font-size: 1.5rem;
 							border-style: solid;
 							border-width: 1px;
+							border-color: gray;
 						}
 						[subm] {
 							background: #ececec;
@@ -327,7 +308,7 @@ body {
 							font-size: 1rem;
 							border-style: solid;
 							border-width: 1px;
-							border-color: black;
+							border-color: gray;
 						}
 					}
 					[optf] {
@@ -404,6 +385,305 @@ body {
 			}
 		}
 	}
+	.foodbook {
+		z-index: 200;
+		@media screen and (min-width: 655px) {
+			width: 97%;
+			position: absolute;
+			height: 87%;
+			text-align: center;
+			top: 40px;
+			margin-bottom: 40px;
+			.menu {
+				border-radius: 10px;
+				width: 80%;
+				height: 100%;
+				background: white;
+				text-align: center;
+				position: absolute;
+				margin-left: 10%;
+				z-index: 10;
+				box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
+				[dinertable] {
+					width: 100%;
+					height: 60px;
+					background: $primary;
+					top: 0;
+					opacity: 0.8;
+					z-index: 3;
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
+					[flager] {
+						font-size: 2rem;
+						color: white;
+						text-align: left;
+						padding-left: 15px;
+						padding-top: 8px;
+						text-transform: uppercase;
+						font-weight: bold;
+						width: 50%;
+						float: left;
+					}
+					[botter] {
+						font-size: 1.7rem;
+						color: white;
+						text-align: right;
+						padding-right: 15px;
+						padding-top: 12px;
+						text-transform: uppercase;
+						font-weight: bold;
+						width: 50%;
+						float: right;
+					}
+				}
+				[booker] {
+					width: 100%;
+					height: 160px;
+					padding: 8px;
+					[abover] {
+						text-align: left;
+						.nc {
+							font-size: 14px;
+							color: gray;
+							font-weight: bold;
+						}
+					}
+
+					[opt] {
+						width: 140px;
+						height: 65px;
+						margin-top: 6px;
+						[opti] {
+							color: gray;
+							font-size: 12px;
+							text-align: left;
+							padding-left: 4px;
+							margin-bottom: 4px;
+						}
+						[selr] {
+							background: #ececec;
+							width: 100%;
+							height: 57% !important;
+							top: 0;
+							border-radius: 6px;
+							text-transform: uppercase;
+							font-size: 1.5rem;
+							border-style: solid;
+							border-width: 1px;
+							border-color: gray;
+						}
+						[subm] {
+							background: #ececec;
+							width: 70%;
+							height: 57%;
+							top: 0;
+							border-radius: 6px;
+							text-transform: uppercase;
+							font-size: 1rem;
+							border-style: solid;
+							border-width: 1px;
+							border-color: gray;
+						}
+					}
+					[optf] {
+						float: left;
+						margin-right: 20px;
+					}
+					[fr] {
+						float: left;
+						margin-right: 20px;
+					}
+					[dtr] {
+						width: 170px !important;
+					}
+					[dtrf] {
+						width: 150px !important;
+					}
+					[fl] {
+						float: right;
+						[opti] {
+							text-align: right;
+							padding-right: 4px;
+						}
+						width: 100px !important;
+					}
+				}
+				[elp] {
+					width: 100%;
+					height: 15px;
+					text-align: left;
+					padding-left: 10px;
+					padding-bottom: -8px;
+					margin-top: -8px;
+					margin-bottom: 8px;
+					.fabb {
+						color: gray;
+					}
+					[ghelp] {
+						padding-right: 15px;
+						font-size: 12px;
+						margin-bottom: 10px;
+						line-height: 0;
+						top: 0;
+					}
+				}
+			}
+			.foodbookmob {
+				visibility: hidden;
+			}
+		}
+		@media screen and (max-width: 654px) {
+			width: 97%;
+			position: absolute;
+			height: 87%;
+			text-align: center;
+			top: 40px;
+			margin-bottom: 40px;
+			visibility: hidden;
+			.menu {
+				#restart:before {
+					content: '\A\A\A';
+					white-space: pre-wrap;
+				}
+				margin-bottom: 100px !important;
+				border-radius: 10px;
+				width: 80%;
+				height: 100%;
+				background: white;
+				text-align: center;
+				position: absolute;
+				margin-left: 10%;
+				z-index: 10;
+				box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
+				[dinertable] {
+					width: 100%;
+					height: 60px;
+					background: $primary;
+					top: 0;
+					opacity: 0.8;
+					z-index: 3;
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
+					[flager] {
+						font-size: 2rem;
+						color: white;
+						text-align: left;
+						padding-left: 15px;
+						padding-top: 8px;
+						text-transform: uppercase;
+						font-weight: bold;
+						width: 50%;
+						float: left;
+					}
+					[botter] {
+						font-size: 1.7rem;
+						color: white;
+						text-align: right;
+						padding-right: 15px;
+						padding-top: 12px;
+						text-transform: uppercase;
+						font-weight: bold;
+						width: 50%;
+						float: right;
+					}
+				}
+				[booker] {
+					width: 100%;
+					height: 160px;
+					padding: 8px;
+					[abover] {
+						text-align: left;
+						.nc {
+							font-size: 14px;
+							color: gray;
+							font-weight: bold;
+						}
+					}
+
+					[opt] {
+						width: 140px;
+						height: 65px;
+						margin-top: 6px;
+						[opti] {
+							color: gray;
+							font-size: 12px;
+							text-align: left;
+							padding-left: 4px;
+							margin-bottom: 4px;
+						}
+						[selr] {
+							background: #ececec;
+							width: 100%;
+							height: 57% !important;
+							top: 0;
+							border-radius: 6px;
+							text-transform: uppercase;
+							font-size: 1.5rem;
+							border-style: solid;
+							border-width: 1px;
+							border-color: gray;
+						}
+						[subm] {
+							background: #ececec;
+							width: 70%;
+							height: 57%;
+							top: 0;
+							border-radius: 6px;
+							text-transform: uppercase;
+							font-size: 1rem;
+							border-style: solid;
+							border-width: 1px;
+							border-color: gray;
+						}
+					}
+					[optf] {
+						float: left;
+						margin-right: 20px;
+					}
+					[fr] {
+						float: left;
+						margin-right: 20px;
+					}
+					[dtr] {
+						width: 170px !important;
+					}
+					[dtrf] {
+						width: 150px !important;
+					}
+					[fl] {
+						float: right;
+						[opti] {
+							text-align: right;
+							padding-right: 4px;
+						}
+						width: 100px !important;
+					}
+				}
+				[elp] {
+					width: 100%;
+					height: 15px;
+					text-align: left;
+					padding-left: 10px;
+					padding-bottom: -8px;
+					margin-top: 80px;
+					margin-bottom: 8px;
+					.fabb {
+						color: gray;
+					}
+					[ghelp] {
+						padding-right: 15px;
+						font-size: 12px;
+						margin-bottom: 10px;
+						line-height: 0;
+						top: 0;
+					}
+				}
+			}
+			.foodbookmob {
+				visibility: visible;
+			}
+		}
+	}
 }
 .datepicker {
 	z-index: 999999 !important;
@@ -459,6 +739,76 @@ body {
 .autocomplete-location {
 	opacity: .8;
 	font-size: smaller;
+}
+
+[adverts] {
+	width: 100%;
+	height: 300px;
+	background: transparent;
+	border-style: solid;
+	border-width: 0px;
+	border-color: black;
+	position: relative;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	opacity: 0.8;
+	box-shadow: 0 -2px 5px 0px #999;
+	[ad-left] {
+		background: $primary;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		border-bottom-left-radius: 10px;
+		border-style: solid;
+		border-right-width: 1px;
+		border-width: 0;
+		color: $secondary;
+		padding: 14px;
+		text-align: left;
+		overflow: scroll;
+	}
+	[ad-left]:hover {
+		color: white;
+	}
+	[ad-right]:hover {
+		color: #413f3f;
+	}
+	[ad-right] {
+		background: $secondary;
+		position: absolute;
+		right: 0;
+		overflow: scroll;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		border-bottom-right-radius: 10px;
+		color: $primary;
+		padding: 14px;
+		text-align: left;
+	}
+	[adhead] {
+		font-weight: bold;
+		font-size: 2rem;
+	}
+	[adcont] {
+		font-size: 1.3rem;
+	}
+	[adhed] {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 655px) {
+	.foodbookmob {
+		visibility: hidden;
+	}
+}
+@media screen and (max-width: 654px) {
+	.foodbookmob {
+		visibility: visible;
+	}
 }
 
 $iPlus: 0;

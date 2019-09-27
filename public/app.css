@@ -318,9 +318,10 @@ body .food {
   body .food {
     width: 97%;
     position: absolute;
-    height: 100%;
+    height: 77.5%;
     text-align: center;
     top: 375px;
+    margin-bottom: 40px;
   }
   html .food .menu,
   head .food .menu,
@@ -421,6 +422,7 @@ body .food {
     font-size: 1.5rem;
     border-style: solid;
     border-width: 1px;
+    border-color: gray;
   }
   html .food .menu [booker] [opt] [subm],
   head .food .menu [booker] [opt] [subm],
@@ -434,7 +436,7 @@ body .food {
     font-size: 1rem;
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: gray;
   }
   html .food .menu [booker] [optf],
   head .food .menu [booker] [optf],
@@ -544,6 +546,404 @@ body .food {
   }
 }
 
+html .foodbook,
+head .foodbook,
+body .foodbook {
+  z-index: 200;
+}
+
+@media screen and (min-width: 655px) {
+  html .foodbook,
+  head .foodbook,
+  body .foodbook {
+    width: 97%;
+    position: absolute;
+    height: 87%;
+    text-align: center;
+    top: 40px;
+    margin-bottom: 40px;
+  }
+  html .foodbook .menu,
+  head .foodbook .menu,
+  body .foodbook .menu {
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    background: white;
+    text-align: center;
+    position: absolute;
+    margin-left: 10%;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+  }
+  html .foodbook .menu [dinertable],
+  head .foodbook .menu [dinertable],
+  body .foodbook .menu [dinertable] {
+    width: 100%;
+    height: 60px;
+    background: #4f9fef;
+    top: 0;
+    opacity: 0.8;
+    z-index: 3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  html .foodbook .menu [dinertable] [flager],
+  head .foodbook .menu [dinertable] [flager],
+  body .foodbook .menu [dinertable] [flager] {
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    float: left;
+  }
+  html .foodbook .menu [dinertable] [botter],
+  head .foodbook .menu [dinertable] [botter],
+  body .foodbook .menu [dinertable] [botter] {
+    font-size: 1.7rem;
+    color: white;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    float: right;
+  }
+  html .foodbook .menu [booker],
+  head .foodbook .menu [booker],
+  body .foodbook .menu [booker] {
+    width: 100%;
+    height: 160px;
+    padding: 8px;
+  }
+  html .foodbook .menu [booker] [abover],
+  head .foodbook .menu [booker] [abover],
+  body .foodbook .menu [booker] [abover] {
+    text-align: left;
+  }
+  html .foodbook .menu [booker] [abover] .nc,
+  head .foodbook .menu [booker] [abover] .nc,
+  body .foodbook .menu [booker] [abover] .nc {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+  }
+  html .foodbook .menu [booker] [opt],
+  head .foodbook .menu [booker] [opt],
+  body .foodbook .menu [booker] [opt] {
+    width: 140px;
+    height: 65px;
+    margin-top: 6px;
+  }
+  html .foodbook .menu [booker] [opt] [opti],
+  head .foodbook .menu [booker] [opt] [opti],
+  body .foodbook .menu [booker] [opt] [opti] {
+    color: gray;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 4px;
+    margin-bottom: 4px;
+  }
+  html .foodbook .menu [booker] [opt] [selr],
+  head .foodbook .menu [booker] [opt] [selr],
+  body .foodbook .menu [booker] [opt] [selr] {
+    background: #ececec;
+    width: 100%;
+    height: 57% !important;
+    top: 0;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+  }
+  html .foodbook .menu [booker] [opt] [subm],
+  head .foodbook .menu [booker] [opt] [subm],
+  body .foodbook .menu [booker] [opt] [subm] {
+    background: #ececec;
+    width: 70%;
+    height: 57%;
+    top: 0;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+  }
+  html .foodbook .menu [booker] [optf],
+  head .foodbook .menu [booker] [optf],
+  body .foodbook .menu [booker] [optf] {
+    float: left;
+    margin-right: 20px;
+  }
+  html .foodbook .menu [booker] [fr],
+  head .foodbook .menu [booker] [fr],
+  body .foodbook .menu [booker] [fr] {
+    float: left;
+    margin-right: 20px;
+  }
+  html .foodbook .menu [booker] [dtr],
+  head .foodbook .menu [booker] [dtr],
+  body .foodbook .menu [booker] [dtr] {
+    width: 170px !important;
+  }
+  html .foodbook .menu [booker] [dtrf],
+  head .foodbook .menu [booker] [dtrf],
+  body .foodbook .menu [booker] [dtrf] {
+    width: 150px !important;
+  }
+  html .foodbook .menu [booker] [fl],
+  head .foodbook .menu [booker] [fl],
+  body .foodbook .menu [booker] [fl] {
+    float: right;
+    width: 100px !important;
+  }
+  html .foodbook .menu [booker] [fl] [opti],
+  head .foodbook .menu [booker] [fl] [opti],
+  body .foodbook .menu [booker] [fl] [opti] {
+    text-align: right;
+    padding-right: 4px;
+  }
+  html .foodbook .menu [elp],
+  head .foodbook .menu [elp],
+  body .foodbook .menu [elp] {
+    width: 100%;
+    height: 15px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: -8px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+  }
+  html .foodbook .menu [elp] .fabb,
+  head .foodbook .menu [elp] .fabb,
+  body .foodbook .menu [elp] .fabb {
+    color: gray;
+  }
+  html .foodbook .menu [elp] [ghelp],
+  head .foodbook .menu [elp] [ghelp],
+  body .foodbook .menu [elp] [ghelp] {
+    padding-right: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 0;
+    top: 0;
+  }
+  html .foodbook .foodbookmob,
+  head .foodbook .foodbookmob,
+  body .foodbook .foodbookmob {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 654px) {
+  html .foodbook,
+  head .foodbook,
+  body .foodbook {
+    width: 97%;
+    position: absolute;
+    height: 87%;
+    text-align: center;
+    top: 40px;
+    margin-bottom: 40px;
+    visibility: hidden;
+  }
+  html .foodbook .menu,
+  head .foodbook .menu,
+  body .foodbook .menu {
+    margin-bottom: 100px !important;
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    background: white;
+    text-align: center;
+    position: absolute;
+    margin-left: 10%;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+  }
+  html .foodbook .menu #restart:before,
+  head .foodbook .menu #restart:before,
+  body .foodbook .menu #restart:before {
+    content: '\A\A\A';
+    white-space: pre-wrap;
+  }
+  html .foodbook .menu [dinertable],
+  head .foodbook .menu [dinertable],
+  body .foodbook .menu [dinertable] {
+    width: 100%;
+    height: 60px;
+    background: #4f9fef;
+    top: 0;
+    opacity: 0.8;
+    z-index: 3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  html .foodbook .menu [dinertable] [flager],
+  head .foodbook .menu [dinertable] [flager],
+  body .foodbook .menu [dinertable] [flager] {
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    float: left;
+  }
+  html .foodbook .menu [dinertable] [botter],
+  head .foodbook .menu [dinertable] [botter],
+  body .foodbook .menu [dinertable] [botter] {
+    font-size: 1.7rem;
+    color: white;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    float: right;
+  }
+  html .foodbook .menu [booker],
+  head .foodbook .menu [booker],
+  body .foodbook .menu [booker] {
+    width: 100%;
+    height: 160px;
+    padding: 8px;
+  }
+  html .foodbook .menu [booker] [abover],
+  head .foodbook .menu [booker] [abover],
+  body .foodbook .menu [booker] [abover] {
+    text-align: left;
+  }
+  html .foodbook .menu [booker] [abover] .nc,
+  head .foodbook .menu [booker] [abover] .nc,
+  body .foodbook .menu [booker] [abover] .nc {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+  }
+  html .foodbook .menu [booker] [opt],
+  head .foodbook .menu [booker] [opt],
+  body .foodbook .menu [booker] [opt] {
+    width: 140px;
+    height: 65px;
+    margin-top: 6px;
+  }
+  html .foodbook .menu [booker] [opt] [opti],
+  head .foodbook .menu [booker] [opt] [opti],
+  body .foodbook .menu [booker] [opt] [opti] {
+    color: gray;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 4px;
+    margin-bottom: 4px;
+  }
+  html .foodbook .menu [booker] [opt] [selr],
+  head .foodbook .menu [booker] [opt] [selr],
+  body .foodbook .menu [booker] [opt] [selr] {
+    background: #ececec;
+    width: 100%;
+    height: 57% !important;
+    top: 0;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+  }
+  html .foodbook .menu [booker] [opt] [subm],
+  head .foodbook .menu [booker] [opt] [subm],
+  body .foodbook .menu [booker] [opt] [subm] {
+    background: #ececec;
+    width: 70%;
+    height: 57%;
+    top: 0;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+  }
+  html .foodbook .menu [booker] [optf],
+  head .foodbook .menu [booker] [optf],
+  body .foodbook .menu [booker] [optf] {
+    float: left;
+    margin-right: 20px;
+  }
+  html .foodbook .menu [booker] [fr],
+  head .foodbook .menu [booker] [fr],
+  body .foodbook .menu [booker] [fr] {
+    float: left;
+    margin-right: 20px;
+  }
+  html .foodbook .menu [booker] [dtr],
+  head .foodbook .menu [booker] [dtr],
+  body .foodbook .menu [booker] [dtr] {
+    width: 170px !important;
+  }
+  html .foodbook .menu [booker] [dtrf],
+  head .foodbook .menu [booker] [dtrf],
+  body .foodbook .menu [booker] [dtrf] {
+    width: 150px !important;
+  }
+  html .foodbook .menu [booker] [fl],
+  head .foodbook .menu [booker] [fl],
+  body .foodbook .menu [booker] [fl] {
+    float: right;
+    width: 100px !important;
+  }
+  html .foodbook .menu [booker] [fl] [opti],
+  head .foodbook .menu [booker] [fl] [opti],
+  body .foodbook .menu [booker] [fl] [opti] {
+    text-align: right;
+    padding-right: 4px;
+  }
+  html .foodbook .menu [elp],
+  head .foodbook .menu [elp],
+  body .foodbook .menu [elp] {
+    width: 100%;
+    height: 15px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: -8px;
+    margin-top: 80px;
+    margin-bottom: 8px;
+  }
+  html .foodbook .menu [elp] .fabb,
+  head .foodbook .menu [elp] .fabb,
+  body .foodbook .menu [elp] .fabb {
+    color: gray;
+  }
+  html .foodbook .menu [elp] [ghelp],
+  head .foodbook .menu [elp] [ghelp],
+  body .foodbook .menu [elp] [ghelp] {
+    padding-right: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 0;
+    top: 0;
+  }
+  html .foodbook .foodbookmob,
+  head .foodbook .foodbookmob,
+  body .foodbook .foodbookmob {
+    visibility: visible;
+  }
+}
+
 .datepicker {
   z-index: 999999 !important;
 }
@@ -603,6 +1003,85 @@ body .food {
 .autocomplete-location {
   opacity: .8;
   font-size: smaller;
+}
+
+[adverts] {
+  width: 100%;
+  height: 300px;
+  background: transparent;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.8;
+  -webkit-box-shadow: 0 -2px 5px 0px #999;
+          box-shadow: 0 -2px 5px 0px #999;
+}
+
+[adverts] [ad-left] {
+  background: #4f9fef;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-style: solid;
+  border-right-width: 1px;
+  border-width: 0;
+  color: #87f796;
+  padding: 14px;
+  text-align: left;
+  overflow: scroll;
+}
+
+[adverts] [ad-left]:hover {
+  color: white;
+}
+
+[adverts] [ad-right]:hover {
+  color: #413f3f;
+}
+
+[adverts] [ad-right] {
+  background: #87f796;
+  position: absolute;
+  right: 0;
+  overflow: scroll;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-bottom-right-radius: 10px;
+  color: #4f9fef;
+  padding: 14px;
+  text-align: left;
+}
+
+[adverts] [adhead] {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+[adverts] [adcont] {
+  font-size: 1.3rem;
+}
+
+[adverts] [adhed] {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 655px) {
+  .foodbookmob {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 654px) {
+  .foodbookmob {
+    visibility: visible;
+  }
 }
 
 .autocomplete-results[data-highlight='0'] > :nth-child(1) {

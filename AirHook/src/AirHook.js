@@ -144,5 +144,56 @@ const AirHook = {
 		elm.innerHTML = pusher;
 		this.events.push({ PUSH: element });
 	},
-	FORMULATE: function(opt) {}
+	FORMULATE: {
+		_scope: [],
+		_target: function(a) {
+			let b = document.querySelector(a);
+			_scope.push(b);
+			return [ true, 'pushed' ];
+		},
+		_format: function(c) {
+			let a = global.format,
+				b = [];
+			+(function() {
+				b.push(a.replace('${iata}', c.iata).replace('${city}', c.city).replace('${state}', c.state));
+			})();
+			return [ b ];
+		},
+		_replace: function(t, a) {
+			t.innerHTML = a;
+			if (t.innerHTML === a) {
+				return [ true, a ];
+			} else {
+				return [ false, t.innerHTML ];
+			}
+		}
+	},
+	SEARCH: function(_in) {
+		return !(function() {
+			let priority = [ 'city', 'iata', 'state' ];
+			var i,
+				o,
+				out = false,
+				cue = [];
+			for (i = 0; i < priority.length; i++) {
+				for (o = 0; o < map.length; o++) {
+					let aa = map[0].priority[i];
+					if (aa.includes(_in)) {
+						out = true;
+						cue.push(o, aa);
+					} else {
+						out = out;
+					}
+				}
+			}
+			if (cue.length >= global['maxReturn']) {
+				cue = cue.slice(0, global['maxReturn']);
+			}
+			if (!out) {
+				return [ false, 'No Result', 'enforce' ];
+			} else {
+				return [ true, cue, out, 'enforce' ];
+			}
+		})();
+	}
 };
