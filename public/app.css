@@ -944,6 +944,62 @@ body .foodbook {
   }
 }
 
+@media screen and (min-width: 655px) {
+  html [universal],
+  head [universal],
+  body [universal] {
+    width: 85%;
+    background: white;
+    height: 700px;
+    margin-left: 7.5%;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+  }
+}
+
+@media screen and (max-width: 654px) {
+  html [universal],
+  head [universal],
+  body [universal] {
+    width: 100%;
+    background: white;
+    height: 700px;
+    margin-left: 0%;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+  }
+}
+
+html [universal] .menu,
+head [universal] .menu,
+body [universal] .menu {
+  height: 100%;
+}
+
+html [universal] .title,
+head [universal] .title,
+body [universal] .title {
+  width: 100%;
+  height: 63px;
+  background: #4f9fef;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-size: 2rem;
+  padding-left: 10px;
+  text-transform: capitalize;
+  padding-top: 6px;
+  font-weight: bold;
+}
+
+html [universal] .table,
+head [universal] .table,
+body [universal] .table {
+  margin: 20px;
+}
+
 .datepicker {
   z-index: 999999 !important;
 }

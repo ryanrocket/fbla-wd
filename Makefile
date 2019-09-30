@@ -3,7 +3,7 @@ CUR_DIR = ./
 DIST = ./dist
 DB = ./dist/monarch.db.json
 
-commit:
+leg-commit:
 	if [-z ${message}]
 	then
 		@echo "Please provide a message=\"message\""
@@ -14,7 +14,7 @@ commit:
 		@echo "\n\nCommit Complete!\n\n"
 	fi
 	
-leg-commit:
+commit:
 	git add -A
 	git commit -m "MAKE: ${message}"
 	git push origin master

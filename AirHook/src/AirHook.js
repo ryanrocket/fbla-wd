@@ -169,7 +169,7 @@ const AirHook = {
 		}
 	},
 	SEARCH: function(_in) {
-		return !(function() {
+		return +(function() {
 			let priority = [ 'city', 'iata', 'state' ];
 			var i,
 				o,
@@ -195,5 +195,6 @@ const AirHook = {
 				return [ true, cue, out, 'enforce' ];
 			}
 		})();
-	}
+	},
+	ASSERT: function(ta) {}
 };

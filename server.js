@@ -1,6 +1,6 @@
 // Ryan Wans 2019 (C)
 const lib = {},
-	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path' ],
+	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path', 'body-parser' ],
 	commons = {
 		assets: '../assets',
 		public: '../public',
@@ -32,6 +32,13 @@ try {
 }
 
 lib['app'].use(lib['cookie-parser']());
+lib['app'].use(lib['body-parser'].json()); // to support JSON-encoded bodies
+lib['app'].use(
+	lib['body-parser'].urlencoded({
+		// to support URL-encoded bodies
+		extended: true
+	})
+);
 
 // universal
 lib['app'].use(function(req, res, next) {
@@ -73,6 +80,10 @@ lib['app'].get('/static/*', function(req, res) {
 	} catch (e) {
 		res.end(rwportal(404));
 	}
+});
+lib['app'].post('/api/book', function(req, res) {
+	console['log'](req.body.promo);
+	res.json({ exit: 1, parsed: 'lib["body-parser"]' });
 });
 
 // 404 handlr

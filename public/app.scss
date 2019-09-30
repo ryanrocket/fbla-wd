@@ -684,6 +684,43 @@ body {
 			}
 		}
 	}
+	[universal] {
+		@media screen and (min-width: 655px) {
+			width: 85%;
+			background: white;
+			height: 700px;
+			margin-left: 7.5%;
+			border-radius: 12px;
+			box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
+		}
+		@media screen and (max-width: 654px) {
+			width: 100%;
+			background: white;
+			height: 700px;
+			margin-left: 0%;
+			border-radius: 12px;
+			box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
+		}
+		.menu {
+			height: 100%;
+		}
+		.title {
+			width: 100%;
+			height: 63px;
+			background: $primary;
+			color: white;
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			font-size: 2rem;
+			padding-left: 10px;
+			text-transform: capitalize;
+			padding-top: 6px;
+			font-weight: bold;
+		}
+		.table {
+			margin: 20px;
+		}
+	}
 }
 .datepicker {
 	z-index: 999999 !important;

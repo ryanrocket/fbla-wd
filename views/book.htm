@@ -57,7 +57,7 @@
                     <a href="/privacy" ghelp>PRIVACY</a>
                 </div>
                 <hr>
-                <div adverts class="adverts">
+                <div adverts class="adverts" onclick="window.location.href='/rewards'">
                     <div ad-left>
                         <h2 adhead>
                             Frequent Flyer?
@@ -144,7 +144,7 @@
                         <a href="/privacy" ghelp>PRIVACY</a>
                     </div>
                     <hr>
-                    <div adverts class="adverts">
+                    <div adverts class="adverts" onclick="window.location.href='/rewards'">
                         <div ad-left>
                             <h2 adhead>
                                 Frequent Flyer?
@@ -181,6 +181,7 @@
                 });
                 console['warn']("${#datepicker}");
             } );
+            $('.adverts').click(window.location.pathname="/rewards");
         </script>
     </div>
     <br><br><br><br>
