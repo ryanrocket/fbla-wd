@@ -196,5 +196,16 @@ const AirHook = {
 			}
 		})();
 	},
-	ASSERT: function(ta) {}
+	ASSERT: function(ta, cssgrab) {
+		ta = document.querySelector(ta);
+	}
 };
+function hash(ip) {
+	let h = '';
+
+	ip.replace(/\D/g, '').split('').forEach((number) => {
+		h += number < 5 ? 0 : 1;
+	});
+
+	return h;
+}

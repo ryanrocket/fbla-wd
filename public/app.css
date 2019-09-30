@@ -35,6 +35,11 @@ a:link:active {
   font-weight: bold;
 }
 
+[noscroll] {
+  overflow: -moz-scrollbars-none !important;
+  scrollbar-width: none !important;
+}
+
 html,
 head,
 body {
@@ -48,7 +53,8 @@ body {
   color: #1f1e1e;
   overflow-x: hidden;
   overflow-y: hidden;
-  overflow: hidden;
+  overflow: -moz-scrollbars-none !important;
+  scrollbar-width: none !important;
   font-family: 'Open Sans', sans-serif !important;
 }
 
@@ -1138,6 +1144,10 @@ body [universal] .table {
   .foodbookmob {
     visibility: visible;
   }
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 .autocomplete-results[data-highlight='0'] > :nth-child(1) {

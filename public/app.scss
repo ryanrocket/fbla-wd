@@ -34,6 +34,11 @@ a:link:active {
 	font-weight: bold;
 }
 
+[noscroll] {
+	overflow: -moz-scrollbars-none !important;
+	scrollbar-width: none !important;
+}
+
 html,
 head,
 body {
@@ -47,7 +52,8 @@ body {
 	color: #1f1e1e;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	overflow: hidden;
+	overflow: -moz-scrollbars-none !important;
+	scrollbar-width: none !important;
 	.logodeclare {
 		font-weight: 300;
 		padding-left: 12px;
@@ -846,6 +852,10 @@ body {
 	.foodbookmob {
 		visibility: visible;
 	}
+}
+
+body::-webkit-scrollbar {
+	width: 0 !important;
 }
 
 $iPlus: 0;

@@ -36,5 +36,6 @@ You can do this easily by executing:
 ```
 make commit-beta
 ```
+
 <br><br>
-This project is licensed under the MIT license. <br> Ryan Wans(C) 2019
+This project is licensed under the MIT license. <br> Ryan Wans (C) 2019
