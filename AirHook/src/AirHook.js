@@ -4,6 +4,7 @@
 const AirHook = {
 	globals: {},
 	events: [],
+	memory: [],
 	map: [
 		{
 			city: 'Tampa',
@@ -110,13 +111,13 @@ const AirHook = {
 		let form = '$C, $S ($I)';
 		var i,
 			formated = '';
-		for (i = 0; i < 2; i++) {
+		for (i = 0; i < 3; i++) {
 			if (i === 0) {
-				form.replace('$C', port.city);
+				form = form.replace('$C', port.city);
 			} else if (i === 1) {
-				form.replace('$S', port.state);
-			} else {
-				form.replace('$I', port.iata);
+				form = form.replace('$S', port.state);
+			} else if (i === 2) {
+				form = form.replace('$I', port.iata);
 			}
 		}
 		return [ form ];
@@ -168,44 +169,61 @@ const AirHook = {
 			}
 		}
 	},
-	SEARCH: function(_in) {
-		return +(function() {
-			let priority = [ 'city', 'iata', 'state' ];
-			var i,
-				o,
-				out = false,
-				cue = [];
-			for (i = 0; i < priority.length; i++) {
-				for (o = 0; o < map.length; o++) {
-					let aa = map[0].priority[i];
-					if (aa.includes(_in)) {
-						out = true;
-						cue.push(o, aa);
-					} else {
-						out = out;
-					}
+	SEARCH: function(_in, asd) {
+		let priority = [ 'city', 'iata', 'state' ];
+		var i,
+			o,
+			out = false,
+			cue = [];
+		for (i = 0; i < priority.length; i++) {
+			for (o = 0; o < arguments[1].length; o++) {
+				let asds = priority[i];
+				let aa = arguments[1][o][asds];
+				if (aa.toUpperCase().includes(_in.toUpperCase())) {
+					out = true;
+					cue.push({ TAG: o, RET: aa });
+				} else {
+					out = out;
 				}
 			}
-			if (cue.length >= global['maxReturn']) {
-				cue = cue.slice(0, global['maxReturn']);
-			}
-			if (!out) {
-				return [ false, 'No Result', 'enforce' ];
-			} else {
-				return [ true, cue, out, 'enforce' ];
-			}
-		})();
+		}
+		if (cue.length >= this.globals['maxReturn']) {
+			cue = cue.slice(0, this.globals['maxReturn']);
+		}
+		if (!out) {
+			return [ false, 'No Result', 'enforce', cue, i, o ];
+		} else {
+			return [ true, cue, out, 'enforce' ];
+		}
 	},
-	ASSERT: function(ta, cssgrab) {
-		ta = document.querySelector(ta);
+	ASSERT: function(ta, cssgrab, val) {
+		try {
+			ta = document.querySelector(ta);
+			let ts = document.querySelector('body');
+			let te = document.createElement('style');
+			te.innerHTML = cssgrab;
+			ts.appendChild(te);
+			ta.innerHTML = val;
+			return [ true ] || [ 1 ];
+		} catch (__e) {
+			throw new Error('Internal Error Occured');
+			return [ false ] || [ 0 ];
+		}
+	},
+	ONACTION: function(
+		__events__,
+		__expected__,
+		__actual__,
+		__usable__,
+		__abstraction__,
+		__forward__,
+		__hydrogen__,
+		____
+	) {
+		this.events.push(__events__, this);
+		let caller_f = __abstraction__ + ':>:FORWARDED' || 'NONE:>:ANONYMOUS';
+		__events__.forEach((element) => {
+			this.memory.push(element);
+		});
 	}
 };
-function hash(ip) {
-	let h = '';
-
-	ip.replace(/\D/g, '').split('').forEach((number) => {
-		h += number < 5 ? 0 : 1;
-	});
-
-	return h;
-}
