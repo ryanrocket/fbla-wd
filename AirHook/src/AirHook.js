@@ -217,13 +217,28 @@ const AirHook = {
 		__usable__,
 		__abstraction__,
 		__forward__,
-		__hydrogen__,
+		__carbon__,
 		____
 	) {
 		this.events.push(__events__, this);
 		let caller_f = __abstraction__ + ':>:FORWARDED' || 'NONE:>:ANONYMOUS';
 		__events__.forEach((element) => {
 			this.memory.push(element);
+			try {
+				let a = this.__events__[element]();
+				if (a !== __expected__) {
+					this.events.push('unexpected outcome || bad predicate');
+				} else {
+				}
+				return [ true, this.__events__[element], a ];
+			} catch (_ee) {
+				return [ false, _ee ];
+			}
 		});
+		// to be continued :P
+	},
+	retgetset: async function() {
+		return arguments[0] >>> arguments[1] === 01 || arguments[0] ^ (arguments[1] === 2) ? true : false;
+		// for future implemtation purposes, WIP
 	}
 };
