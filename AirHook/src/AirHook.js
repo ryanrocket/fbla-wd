@@ -177,7 +177,7 @@ const AirHook = {
 	},
 	SCON: function(ter) {
 		let local_a = document.querySelector(ter);
-		this.SEARCH(local_a.innerText, map);
+		return this.SEARCH(local_a.innerText, map);
 	},
 	SEARCH: function(_in, asd) {
 		let priority = [ 'city', 'iata', 'state' ];
