@@ -256,4 +256,6 @@ const AirHook = {
 			this.pushEvent('keyup', abh[element], 'searchtype', '001');
 		});
 	}
+	// TODO: Convert SEARCH function output into a div target and replace
+	//		 then return a boolean success rate
 };
