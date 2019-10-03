@@ -125,6 +125,10 @@ const AirHook = {
 	config: function(opt) {
 		opt = { opt };
 		globals = { opt };
+		// must include
+		// maxReturn
+		// format
+		// target
 		return [ true ];
 	},
 	softCSS: function() {
@@ -133,12 +137,14 @@ const AirHook = {
 			'.airhook-active {background: blue; font-weight: bold;}';
 		return [ soft ];
 	},
-	pushEvent: function(event, id, outcome) {
+	pushEvent: function(event, id, outcome, pid) {
 		let elm = document.querySelector(id);
 		elm.addEventListener(event, function() {
-			outcome();
+			if (outcome === 'searchtype') {
+				this.SCON(this.globals.target);
+			}
 		});
-		this.events.push([ event, id ]);
+		this.events.push([ event, id, pid ]);
 	},
 	override: function(pusher, element) {
 		let elm = document.querySelector(element);
@@ -168,6 +174,10 @@ const AirHook = {
 				return [ false, t.innerHTML ];
 			}
 		}
+	},
+	SCON: function(ter) {
+		let local_a = document.querySelector(ter);
+		this.SEARCH(local_a.innerText, map);
 	},
 	SEARCH: function(_in, asd) {
 		let priority = [ 'city', 'iata', 'state' ];
@@ -240,5 +250,10 @@ const AirHook = {
 	retgetset: async function() {
 		return arguments[0] >>> arguments[1] === 01 || arguments[0] ^ (arguments[1] === 2) ? true : false;
 		// for future implemtation purposes, WIP
+	},
+	FOCUSTARGET: function(abh) {
+		abh.forEach((element) => {
+			this.pushEvent('keyup', abh[element], 'searchtype', '001');
+		});
 	}
 };
