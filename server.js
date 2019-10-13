@@ -1,6 +1,6 @@
 // Ryan Wans 2019 (C)
 const lib = {},
-	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path', 'body-parser' ],
+	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path', 'body-parser', 'socket.io' ],
 	commons = {
 		assets: '../assets',
 		public: '../public',
@@ -39,6 +39,8 @@ lib['app'].use(
 		extended: true
 	})
 );
+
+let io = new lib['socket.io']();
 
 // universal
 lib['app'].use(function(req, res, next) {
@@ -82,8 +84,9 @@ lib['app'].get('/static/*', function(req, res) {
 	}
 });
 lib['app'].post('/api/book', function(req, res) {
-	console['log'](req.body.promo);
-	res.json({ exit: 1, parsed: 'lib["body-parser"]' });
+	let gg = req.body;
+	res.cookie('cartvalue', gg);
+	res.redirect('/cart');
 });
 
 // 404 handlr
