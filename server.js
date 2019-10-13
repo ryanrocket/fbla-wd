@@ -85,8 +85,27 @@ lib['app'].get('/static/*', function(req, res) {
 });
 lib['app'].post('/api/book', function(req, res) {
 	let gg = req.body;
+	let l = gg.date.split(','),
+		g = [];
+	l.forEach((element) => {
+		g.push(element.split('/')[0]);
+	});
+	let durr = Math.max.apply(null, g) - Math.min.apply(null, g) + 1;
 	res.cookie('cartvalue', gg);
-	res.redirect('/cart');
+	res.redirect(
+		'/cart?rt=' +
+			gg.roundtrip +
+			'&dep=' +
+			gg.dep +
+			'&arr=' +
+			gg.arr +
+			'&pass=' +
+			gg.pass +
+			'&promo=' +
+			gg.promo +
+			'&dur=' +
+			durr
+	);
 });
 
 // 404 handlr

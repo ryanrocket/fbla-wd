@@ -7,6 +7,9 @@ $secondary: #87f796;
 [fixed] {
 	position: fixed;
 }
+[capat] {
+	text-transform: uppercase;
+}
 [abs] {
 	position: absolute;
 }
@@ -694,7 +697,7 @@ body {
 		@media screen and (min-width: 655px) {
 			width: 85%;
 			background: white;
-			height: 700px;
+			height: 600px;
 			margin-left: 7.5%;
 			border-radius: 12px;
 			box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
@@ -702,7 +705,7 @@ body {
 		@media screen and (max-width: 654px) {
 			width: 100%;
 			background: white;
-			height: 700px;
+			height: 600px;
 			margin-left: 0%;
 			border-radius: 12px;
 			box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .205);
@@ -725,6 +728,46 @@ body {
 		}
 		.table {
 			margin: 20px;
+			.citem {
+				background: #dddbdb;
+				width: 90%;
+				height: auto;
+				padding: 5px;
+				border-radius: 5px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-weight: bold;
+				font-size: 1.55rem;
+				border-bottom-left-radius: 0px;
+				border-bottom-right-radius: 0px;
+				color: #4e4e4e;
+				pricer {
+					text-align: right !important;
+					float: right;
+					padding-right: 10px;
+				}
+			}
+			.cexpand {
+				background: #f1f0f0;
+				width: 90%;
+				height: auto;
+				padding: 5px;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				padding-left: 20px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+				font-weight: bold;
+				font-size: 1.2rem;
+				color: #4e4e4e;
+				forwards {
+					font-weight: 400;
+					color: gray;
+				}
+			}
 		}
 	}
 }

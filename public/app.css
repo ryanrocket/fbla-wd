@@ -3,6 +3,10 @@
   position: fixed;
 }
 
+[capat] {
+  text-transform: uppercase;
+}
+
 [abs] {
   position: absolute;
 }
@@ -956,7 +960,7 @@ body .foodbook {
   body [universal] {
     width: 85%;
     background: white;
-    height: 700px;
+    height: 600px;
     margin-left: 7.5%;
     border-radius: 12px;
     -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
@@ -970,7 +974,7 @@ body .foodbook {
   body [universal] {
     width: 100%;
     background: white;
-    height: 700px;
+    height: 600px;
     margin-left: 0%;
     border-radius: 12px;
     -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
@@ -1004,6 +1008,57 @@ html [universal] .table,
 head [universal] .table,
 body [universal] .table {
   margin: 20px;
+}
+
+html [universal] .table .citem,
+head [universal] .table .citem,
+body [universal] .table .citem {
+  background: #dddbdb;
+  width: 90%;
+  height: auto;
+  padding: 5px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.55rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #4e4e4e;
+}
+
+html [universal] .table .citem pricer,
+head [universal] .table .citem pricer,
+body [universal] .table .citem pricer {
+  text-align: right !important;
+  float: right;
+  padding-right: 10px;
+}
+
+html [universal] .table .cexpand,
+head [universal] .table .cexpand,
+body [universal] .table .cexpand {
+  background: #f1f0f0;
+  width: 90%;
+  height: auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4e4e4e;
+}
+
+html [universal] .table .cexpand forwards,
+head [universal] .table .cexpand forwards,
+body [universal] .table .cexpand forwards {
+  font-weight: 400;
+  color: gray;
 }
 
 .datepicker {
