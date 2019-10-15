@@ -954,6 +954,14 @@ body .foodbook {
   }
 }
 
+html [universal],
+head [universal],
+body [universal] {
+  overflow-y: scroll;
+  padding-bottom: 100px;
+  overflow-x: hidden !important;
+}
+
 @media screen and (min-width: 655px) {
   html [universal],
   head [universal],
@@ -974,7 +982,7 @@ body .foodbook {
   body [universal] {
     width: 100%;
     background: white;
-    height: 600px;
+    height: 500px;
     margin-left: 0%;
     border-radius: 12px;
     -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
@@ -1262,4 +1270,31 @@ body::-webkit-scrollbar {
 }
 
 /* responsive?? (laughing emoji) more like barely usable! */
+table {
+  width: 90%;
+  border-radius: 3px;
+  border-bottom: #e0e0e0 solid 2px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table#t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table#t01 th {
+  background-color: #87f796;
+  color: #757575;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
 /*# sourceMappingURL=app.css.map */
