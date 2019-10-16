@@ -47,7 +47,7 @@
             // Push Datepicker
             try {
                 $(document).ready(function() {
-                    console['clear']();
+                 console['clear']();
                     const debug = { trace: function(a){ window.templater.push({"trace": a}); return a; } };
                     debug.trace(true);
                     console['log']("[DEBUG] Debugger is tracing content...");
@@ -114,7 +114,15 @@
                 //     $("#wrapper").css("visibility", "visible");
                 // }, 800);
             });
-
+            TEMP.force({
+                layer: 'monarch',
+                ret: true,
+                vals: '09||loe',
+                lr: 'monarchUUID'
+            },
+            function() {
+                return 'confirm';
+            });
             // Enforce Airport Input To Fun
             if(window.location.pathname === '/cart') {
                 +(function() {
