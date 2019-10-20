@@ -3,6 +3,19 @@ CUR_DIR = ./
 DIST = ./dist
 DB = ./dist/monarch.db.json
 
+SRC_FILES=$(wildcard $(SRC_DIR)/*.c)									
+SRC_OBJS=$(patsubst $(SRC_DIR)/%.c,$(BIN_DIR)/%.o, $(SRC_FILES))		
+
+EXAMPLES_FILES=$(wildcard $(EXAMPLES_DIR)/*.c)
+EXAMPLES_OBJS=$(patsubst $(EXAMPLES_DIR)/%.c,$(BIN_EXAMPLES_DIR)/%.o, $(EXAMPLES_FILES))
+EXAMPLES_EXES=$(patsubst %.o,%, $(EXAMPLES_OBJS))
+EXAMPLES_TARGETS=$(patsubst $(EXAMPLES_DIR)/%.c,$(BIN_EXAMPLES_DIR)/%, $(EXAMPLES_FILES))
+
+# Create lists of src, example firs
+EXAMPLES_FFMPEG_FILES=$(wildcard $(EXAMPLES_FFMPEG_DIR)/*.c)
+EXAMPLES_FFMPEG_OBJS=$(patsubst $(EXAMPLES_FFMPEG_DIR)/%.c,$(BIN_EXAMPLES_FFMPEG_DIR)/%.o, $(EXAMPLES_FFMPEG_FILES))
+EXAMPLES_FFMPEG_EXES=$(patsubst $(EXAMPLES_FFMPEG_DIR)/%.c,$(BIN_EXAMPLES_FFMPEG_DIR)/%, $(EXAMPLES_FFMPEG_FILES))
+
 leg-commit:
 	if [-z ${message}]
 	then
