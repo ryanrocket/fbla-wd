@@ -1,6 +1,41 @@
 // AirHook by Ryan Wans (C) 2019
 // AirHook.JS | Serves As MiddleWare For AirHook
 
+!(function() {
+	if (typeof document.createStyleSheet === 'undefined') {
+		document.createStyleSheet = (function() {
+			function createStyleSheet(href) {
+				if (typeof href !== 'undefined') {
+					var element = document.createElement('link');
+					element.type = 'text/css';
+					element.rel = 'stylesheet';
+					element.href = href;
+				} else {
+					var element = document.createElement('style');
+					element.type = 'text/css';
+				}
+
+				document.getElementsByTagName('head')[0].appendChild(element);
+				var sheet = document.styleSheets[document.styleSheets.length - 1];
+
+				if (typeof sheet.addRule === 'undefined') sheet.addRule = addRule;
+
+				if (typeof sheet.removeRule === 'undefined') sheet.removeRule = sheet.deleteRule;
+
+				return sheet;
+			}
+
+			function addRule(selectorText, cssText, index) {
+				if (typeof index === 'undefined') index = this.cssRules.length;
+
+				this.insertRule(selectorText + ' {' + cssText + '}', index);
+			}
+
+			return createStyleSheet;
+		})();
+	}
+})();
+
 const AirHook = {
 	globals: {},
 	events: [],
@@ -265,13 +300,7 @@ const AirHook = {
 		return [ true, e, f ];
 	},
 	ASSERTCSS: function(s_css_) {
-		let f = document.querySelector('body');
-		let e = document.createElement('style');
-		e.style.cssText = s_css_;
-		e.className = 'airhook_styling';
-		console.trace(e);
-		document.body.appendChild(f);
-		return [ true, e, f ];
+		let f = document.createStyleSheet('bar.css');
 	}
 	// TODO: Convert SEARCH function output into a div target and replace
 	//		 then return a boolean success rate
