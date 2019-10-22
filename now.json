@@ -1,0 +1,13 @@
+{
+	"version": 2,
+	"name": "fbla-wd",
+	"builds": [
+		{ "src": "views/**/*", "use": "@now/static" },
+		{ "src": "static/**/*", "use": "@now/node" },
+		{ "src": "assets/**/*", "use": "@now/node" }
+	],
+	"routes": [
+		{ "src": "/", "dest": "public/index.html" },
+		{ "src": "/api/templater.js", "dest": "assets/templater.js" }
+	]
+}

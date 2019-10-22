@@ -1,6 +1,6 @@
-<div home>
+<div noscroll home>
     <div id="logo">
-        <img data-aos="fade-down" data-aos-duration="1000" src="/static/neqy.png" alt="newyork" width="1000" height="530" id="fp"/>
+        <img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="10" src="/static/neqy.png" alt="newyork" width="1000" height="530" id="fp"/>
         
     </div>
     
@@ -20,40 +20,68 @@
                     </div>
                     <div opt optf>
                         <h3 opti>DEPARTURE</h3>
-                        <input type="text" maxlength="3" selr>
-
+                        <input type="text" name="dep" id="depart" maxlength="10" selr>
                         </input>
                     </div>
                     <div opt fr>
                         <h3 opti>ARRIVE</h3>
-                        <input type="text" maxlength="3" selr>
+                        <input type="text" name="arr" id="arrive" maxlength="10" selr>
 
                         </input>
                     </div>
                     <div opt fr dtrf>
                         <h3 opti>DATE SELECTOR</h3>
+                        <input type="text" name="date" id="datepicker" selr>
                     </div>
                     <div opt fr>
                         <h3 opti>PASSENGERS</h3>
+                        <input type="number" name="pass" maxlength="1"  min="0"  max="9" selr>
+
+                        </input>
                     </div>
                     <div opt fr dtr>
                         <h3 opti>PROMO CODE</h3>
+                        <input type="text" name="promo" maxlength="8" selr>
+
+                        </input>
                     </div>
                     <div opt fl>
                             <h3 opti>BOOK FLIGHT</h3>
+                            <button type="submit" subm>BOOK</button>
                         </div>
                 </form>
             </div>
             <hr>
             <div elp>
                 <i class="fas fa-plane fabb"></i>
-                <a href="/location" ghelp>LOCATIONS</a>
+                <a href="/locations" ghelp>LOCATIONS</a>
                 <i class="fas fa-file-contract fabb"></i>
                 <a href="/terms" ghelp>TERMS</a>
                 <i class="fas fa-lock fabb"></i>
                 <a href="/privacy" ghelp>PRIVACY</a>
             </div>
             <hr>
+            <div noscroll adverts class="adverts" onclick="window.location.href='/rewards'">
+                <div noscroll ad-left>
+                    <h2 adhead>
+                        Frequent Flyer?
+                    </h2><br>
+                    <p adhed>
+                        Purchase A Membership To Earn Points Every Flight And 
+                        Pay For Future Trips!
+                    </p>
+                </div>
+                <div noscroll ad-right>
+                    <h2 adhead>
+                        Early Check In
+                    </h2> <br>
+                    <p adcont>
+                        Check in 36 hours before your flight to get a better boarding 
+                        position,
+                        ranging from $10-$20 per passenger.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -70,5 +98,14 @@
     </div>
     -->
     <br><br><br>
+    <script app>
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                multidate: true
+            });
+            console['warn']("${#datepicker}");
+        } );
+        $('.adverts').click(window.location.pathname="/rewards");
+    </script>
 </div>
 <br><br><br><br>

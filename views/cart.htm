@@ -1,0 +1,59 @@
+<div universal cart>
+    <script>
+        +(function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let i = 0;
+            var parms = ['rt', 'dep', 'arr', 'pass', 'promo', 'dur'];
+            for(i=0; i < 6; i++) {
+                let a = urlParams.get(parms[i]);
+                $('#forwards'+(i+1)).text(a);
+            }
+        })();
+    </script>
+    <div class="menu">
+            <div class="title">
+                <sr>
+                    Planned Flight
+                </sr>
+            </div>
+            <div class="table">
+                <div class="citem">
+                    &nbsp;FLIGHT
+                    <pricer>
+                             &nbsp; <i class="fas fa-chevron-down"></i>
+                    </pricer>
+                </div>
+                <div class="cexpand">
+                    Departure Airport: <forwards capat id="forwards2">loading...</forwards><br>
+                    Arrival Airport: <forwards capat id="forwards3">loading...</forwards><br>
+                    Passengers: <forwards id="forwards4">loading...</forwards><br> 
+                    Trip Duration: <forwards id="forwards6">loading...</forwards><br>
+                    OAB: <forwards capat id="forwards1">loading...</forwards><br>
+                </div>
+                
+                <div class="citem">
+                        &nbsp;PRICING
+                        <pricer>
+                                $228.91 &nbsp; <i class="fas fa-chevron-down"></i>
+                        </pricer>
+                    </div>
+                    <div class="cexpand">
+                        Subtotal: <forwards id="forwards">$195.78</forwards><br>
+                        Discount: <forwards capat id="forwards5">loading...</forwards><br>
+                        Tax: <forwards id="forwards">$19.39</forwards><br>
+                        Total: <forwards id="forwards">$228.91</forwards><br>
+                    </div>
+            </div>
+        </div>
+</div>
+<script>
+        +(function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let i = 0;
+            var parms = ['rt', 'dep', 'arr', 'pass', 'promo', 'dur'];
+            for(i=0; i < 6; i++) {
+                let a = urlParams.get(parms[i]);
+                $('#forwards'+(i+1)).text(a);
+            }
+        })();
+    </script>

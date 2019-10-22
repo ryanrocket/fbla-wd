@@ -7,6 +7,14 @@ export const prod = {
 
 export const hook = () => {
 	const a = {
-		pkg: () => {}
+		pkg: () => {},
+		hty: (a) => {
+			try {
+				a();
+				return [ true ];
+			} catch (e) {
+				return { e };
+			}
+		}
 	};
 };

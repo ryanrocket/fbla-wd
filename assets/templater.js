@@ -74,5 +74,16 @@ const TEMP = {
 		let c = b[0].toUpperCase();
 		b[0] = c;
 		window.document.title = dd + b.join('');
+	},
+	force: (aa, b) => {
+		let c = +b();
+		let id = Date.now();
+		document.cookie = aa.lr + '=mT' + id + '-()';
+		window.templater.push(aa.lr + id);
+		if (aa.ret) {
+			return [ aa.vals, true, c ];
+		} else {
+			return [ false ];
+		}
 	}
 };

@@ -1,6 +1,6 @@
 // Ryan Wans 2019 (C)
 const lib = {},
-	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path' ],
+	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path', 'body-parser', 'socket.io' ],
 	commons = {
 		assets: '../assets',
 		public: '../public',
@@ -32,6 +32,15 @@ try {
 }
 
 lib['app'].use(lib['cookie-parser']());
+lib['app'].use(lib['body-parser'].json()); // to support JSON-encoded bodies
+lib['app'].use(
+	lib['body-parser'].urlencoded({
+		// to support URL-encoded bodies
+		extended: true
+	})
+);
+
+let io = new lib['socket.io']();
 
 // universal
 lib['app'].use(function(req, res, next) {
@@ -50,6 +59,9 @@ lib['app'].get('/api/app.css', function(req, res) {
 });
 lib['app'].get('/api/templater.js', function(req, res) {
 	res.sendFile('./assets/templater.js', { root: __dirname });
+});
+lib['app'].get('/api/monarch.live.js', function(req, res) {
+	res.sendFile('./assets/monarch.live.js', { root: __dirname });
 });
 lib['app'].get('/api/void.ts', function(req, res) {
 	res.sendFile('./assets/void.ts', { root: __dirname });
@@ -70,6 +82,30 @@ lib['app'].get('/static/*', function(req, res) {
 	} catch (e) {
 		res.end(rwportal(404));
 	}
+});
+lib['app'].post('/api/book', function(req, res) {
+	let gg = req.body;
+	let l = gg.date.split(','),
+		g = [];
+	l.forEach((element) => {
+		g.push(element.split('/')[0]);
+	});
+	let durr = Math.max.apply(null, g) - Math.min.apply(null, g) + 1;
+	res.cookie('cartvalue', gg);
+	res.redirect(
+		'/cart?rt=' +
+			gg.roundtrip +
+			'&dep=' +
+			gg.dep +
+			'&arr=' +
+			gg.arr +
+			'&pass=' +
+			gg.pass +
+			'&promo=' +
+			gg.promo +
+			'&dur=' +
+			durr
+	);
 });
 
 // 404 handlr
