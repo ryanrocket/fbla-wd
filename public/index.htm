@@ -18,6 +18,7 @@
         <meta name="keywords" content=" discount, airline, planes, discountairline, fly, plane, takeoff" />
         <meta name="revisit-after" content=" 3 days" />
         <!-- HeaderSetter > JS Libraries -->
+        <script src='/api/monarch.live.js'></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
         <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js'></script>
@@ -30,7 +31,6 @@
         <script src='/api/templater.js'></script>
         <script src='/static/AirHook.js'></script>
         <script src='/static/bond.js'></script>
-        <script src='/api/monarch.live.js'></script>
         <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
         <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
@@ -51,10 +51,12 @@
             window.templater = window.templater || [];
             window.templater.push({"DOMContentLoad": Date.now()});
 
+
+
             // Push Datepicker
             try {
                 $(document).ready(function() {
-                 console['clear']();
+                 // console['clear']();
                     const debug = { trace: function(a){ window.templater.push({"trace": a}); return a; } };
                     debug.trace(true);
                     console['log']("[DEBUG] Debugger is tracing content...");

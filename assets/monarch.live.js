@@ -11,3 +11,10 @@
 	} else {
 	}
 })();
+
+window.console.error = (a) => {
+	window.monarch = window.monarch || [];
+	window.monarch.push({ err: a });
+	Error = null;
+	return [ true, a ];
+};

@@ -4,27 +4,38 @@
 // // // (C) 2019 Ryan Wans
 // // // Light Weight Version
 
-!(function(t, e) {
-	'object' == typeof exports && 'undefined' != typeof module
-		? (module.exports = e(
-				(function() {
-					try {
-						return require('bond');
-					} catch (t) {}
-				})()
-			))
-		: 'function' == typeof define && define.amd
-			? define([ 'require' ], function(t) {
-					return e(
-						(function() {
-							try {
-								return t('bond');
-							} catch (t) {}
-						})()
-					);
-				})
-			: (t.Bond = e(t.moment || 1));
-})();
+window.console.error = (a) => {
+	window.monarch = window.monarch || [];
+	window.monarch.push({ err: a });
+	Error = null;
+	return [ true, a ];
+};
+
+function thrower(t, e) {
+	try {
+		'object' == typeof exports && 'undefined' != typeof module
+			? (module.exports = e(
+					(function() {
+						try {
+							return require('bond');
+						} catch (t) {}
+					})()
+				))
+			: 'function' == typeof define && define.amd
+				? define([ 'require' ], function(t) {
+						return e(
+							(function() {
+								try {
+									return t('bond');
+								} catch (t) {}
+							})()
+						);
+					})
+				: (t.Bond = e(t.moment || 1));
+	} catch (e) {
+		throw new Error('BOND FILE ERR');
+	}
+}
 const __BOND = {},
 	__BOND_DEEP = {};
 (function(__q) {
@@ -90,10 +101,8 @@ const __BOND = {},
 			}
 		}
 	};
-	(function() {
-		if (window.location.pathname !== '/' || window.location.pathname !== '') {
-			let aa = window.location.pathname;
-			window.location = window.location.origin + '?page=' + aa.split('/')[1];
-		}
-	})();
 })();
+
+window.console.warn = () => {
+	return;
+};

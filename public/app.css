@@ -53,7 +53,7 @@ body {
   border: 0;
   width: 100%;
   height: 100%;
-  background: #eff1f1 !important;
+  background: #ffffff !important;
   color: #1f1e1e;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -77,6 +77,7 @@ body .navbar {
           box-shadow: 0 6px 6px -6px #999;
   width: 100%;
   z-index: 30000;
+  background: #eeeded;
 }
 
 html .brand,
@@ -328,7 +329,7 @@ body .food {
   body .food {
     width: 97%;
     position: absolute;
-    height: 77.5%;
+    height: 75%;
     text-align: center;
     top: 375px;
     margin-bottom: 40px;
@@ -432,7 +433,7 @@ body .food {
     font-size: 1.5rem;
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: #80808044;
   }
   html .food .menu [booker] [opt] [subm],
   head .food .menu [booker] [opt] [subm],
@@ -568,7 +569,7 @@ body .foodbook {
   body .foodbook {
     width: 97%;
     position: absolute;
-    height: 87%;
+    height: 85%;
     text-align: center;
     top: 40px;
     margin-bottom: 40px;
@@ -672,7 +673,7 @@ body .foodbook {
     font-size: 1.5rem;
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: #80808044;
   }
   html .foodbook .menu [booker] [opt] [subm],
   head .foodbook .menu [booker] [opt] [subm],
@@ -872,7 +873,7 @@ body .foodbook {
     font-size: 1.5rem;
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: #80808044;
   }
   html .foodbook .menu [booker] [opt] [subm],
   head .foodbook .menu [booker] [opt] [subm],
@@ -1273,21 +1274,24 @@ body::-webkit-scrollbar {
 table {
   width: 90%;
   border-radius: 3px;
-  border-bottom: #e0e0e0 solid 2px;
+  border: none !important;
 }
 
 th,
 td {
   padding: 15px;
   text-align: left;
+  border: none !important;
 }
 
 table#t01 tr:nth-child(even) {
   background-color: #eee;
+  border: none !important;
 }
 
 table#t01 tr:nth-child(odd) {
   background-color: #fff;
+  border: none !important;
 }
 
 table#t01 th {
