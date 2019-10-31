@@ -45,6 +45,8 @@ let io = new lib['socket.io']();
 // universal
 lib['app'].use(function(req, res, next) {
 	res.cookie('_stmp', Date.now());
+	res.header('qued', Date.now());
+	res.header('X-RWAPI', '^3.6.3 REV');
 	next();
 });
 
