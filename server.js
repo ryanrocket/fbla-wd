@@ -115,6 +115,6 @@ lib['app'].get('/*', function(req, res) {
 	res.sendFile('./public/index.htm', { root: __dirname });
 });
 
-lib['app'].listen(9000, () => {
+lib['app'].listen(80, () => {
 	console['log']('LISTENING ON PORT 9000');
 });
