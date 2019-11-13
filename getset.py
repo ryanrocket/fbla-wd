@@ -4,7 +4,6 @@
 import time         # to manage waits
 import subprocess   # to execute git commands
 
-
 global ratio    
 ratio = 60 #in seconds
 
