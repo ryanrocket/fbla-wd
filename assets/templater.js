@@ -12,10 +12,12 @@ const TEMP = {
 	eventQue: {},
 	upperContent: {},
 	number: 0,
-	add: function(urls, div) {
-		this.eventQue[this.number] = {};
-		this.eventQue[this.number]['u'] = urls;
-		this.eventQue[this.number]['_target'] = div;
+	add: function(urls, div, opts) {
+		// Added Feature: Template Prioritizing
+		this.eventQue[opts.priority] = {};
+		this.eventQue[opts.priority]['u'] = urls;
+		this.eventQue[opts.priority]['_target'] = div;
+		this.eventQue[opts.priority]['opts'] = opts;
 		this.number++;
 	},
 	get: function(url) {

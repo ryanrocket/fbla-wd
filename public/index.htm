@@ -101,17 +101,17 @@
             // Ryan Wans 2019 (C)
 
             // Enforce Templater to run
-            TEMP.add("/view/nav.htm", "#nav");
-            TEMP.add("/view/foot.htm", "#foot");
+            TEMP.add("/view/nav.htm", "#nav", {priority: 1});
+            TEMP.add("/view/foot.htm", "#foot", {priority: 2});
                 (window.location.pathname === "/" 
                 || window.location.pathname === "")
                     ? (function() {
-                        TEMP.add("/view/home.htm", "#tc");
+                        TEMP.add("/view/home.htm", "#tc", {priority: 0});
                     })()
                     : (function() {
                         TEMP.add("/view"+
                         window.location.pathname+
-                        ".htm", "#tc");
+                        ".htm", "#tc", {priority: 0});
                         TEMP.gTitle("Monarch - ");
                     })()
 
