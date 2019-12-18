@@ -5,7 +5,7 @@ Exports Latest Stable Version
 This website is a light weight Node application that uses a templater to fit components in the webpage into place.
 The website uses various plugins such as Bootstrap, AOS, TweenMax, Moment, and jQuery to help the website be
 more responsive and create a better user expirience. The site also offers a REST API for all of the backend applications
-such as form posts, plugin exports, and static images.
+such as form posts, plugin exports, and static images. I also introduced my own plugin called Templater to help create a Vue-like file templating environment for node.
 
 ## Ussage
 To Start, make sure you have the latest version of node installed. Then clone the git repo and cd into it. <br>
