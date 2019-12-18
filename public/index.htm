@@ -148,6 +148,19 @@
 
             // Enforce AirHook to Run
             0
+            let rrf = function() {
+                let aa = Math.floor(Math.random() * (300 - 200) ) + 200, bb = Math.floor(Math.random() * (99 - 11) ) + 11;
+                var fin = "$" + aa + "." + bb;
+                var ffine = "$" + (aa-19) + "." + (bb-11);
+                $('#subt').text(ffine);
+                $("#ttot").text(fin);
+                $("#tttot").text(fin);
+            };
+            if(window.location.pathname === "/cart") {
+                setTimeout((function() {
+                    rrf();
+                }),700);
+            }
         </script>
         <style>
             
