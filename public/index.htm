@@ -85,7 +85,7 @@
                 console['warn']("${#datepicker}");
                 $('.date').datepicker('setDates', [new Date(2014, 2, 5), new Date(2014, 3, 5)])
             } catch(e) {
-                console['warn']("Caught on ${here}");
+                console['warn']("Caught on ${errLoc}");
             }
 
             // Assert Monarch Dep
@@ -170,6 +170,18 @@
                     rrf();
                 }),700);
             }
+
+            // test mode
+            !(function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if(urlParams.get('testing') === 'true') {
+                    setInterval(function() {
+                        window.location.reload(true);
+                        console['log']("Cold Reload Qued");
+                    }, 5000);
+                } else {}
+            })();
+            
         </script>
         <style>
             

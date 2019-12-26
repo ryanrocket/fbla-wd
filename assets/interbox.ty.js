@@ -1,4 +1,4 @@
-// InterBox - An Uphelp Chatbox Plugin by Ryan Wans
+// InterBox - An Upheld Chatbox Plugin by Ryan Wans
 
 // LAYOUT
 //  - ibox object

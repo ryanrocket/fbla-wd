@@ -26,6 +26,7 @@ const TEMP = {
 		a.send(null);
 		return a.responseText;
 	},
+	// i love you :)
 	upper: function() {
 		let a = Object.keys(this.eventQue),
 			i = 0;
