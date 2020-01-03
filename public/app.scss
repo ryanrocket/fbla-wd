@@ -184,7 +184,6 @@ body {
         left: 0;
 
         #llogo {
-            float: left;
             margin-right: 30px;
         }
 
@@ -210,11 +209,30 @@ body {
             border-style: solid;
             border-color: gray;
             border-width: 0px;
+            text-align: center;
+
+        }
+        #fpj {
+            @media screen and (min-width: 1030px) {
+                border-radius: 8px;
+                background: linear-gradient(to bottom, white, transparent 60%);
+            }
+
+            @media screen and (max-width: 1029px) {
+                width: 100% !important;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            border-style: solid;
+            border-color: gray;
+            border-width: 0px;
+            float: left;
+            left: 0;
         }
 
         .scream {
             position: absolute;
-            text-align: left;
             color: white;
             top: 4rem;
             font-size: 2.8rem;

@@ -18,7 +18,7 @@
         <meta name="keywords" content=" discount, airline, planes, discountairline, fly, plane, takeoff" />
         <meta name="revisit-after" content=" 3 days" />
         <!-- HeaderSetter > JS Libraries -->
-        <script src='/api/monarch.live.js'></script>
+        
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
         <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js'></script>
@@ -35,11 +35,14 @@
         <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
         <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src='/api/monarch.cold.js'></script>
         <!-- HeaderSetter > CSS Libraries -->
         <style lang="scss" scoped sass></style>
         <link rel='stylesheet' href='/api/app.scss' />
         <link rel='stylesheet' href='/api/app.css.map' />
         <link rel='stylesheet' href='/api/app.css' />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>	
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css' />
         <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
@@ -106,7 +109,7 @@
             </div>
         -->
         <script>
-            TEMP.add("/view/nav.htm","#nav",{priority:1}),TEMP.add("/view/foot.htm","#foot",{priority:2}),"/"===window.location.pathname||""===window.location.pathname?TEMP.add("/view/home.htm","#tc",{priority:0}):(TEMP.add("/view"+window.location.pathname+".htm","#tc",{priority:0}),TEMP.gTitle("Monarch - ")),TEMP.repl(),TEMP.created(function(){AOS.init(),console.log("[!] Animation Que Fired")}),TEMP.force({layer:"monarch",ret:!0,vals:"09||loe",lr:"monarchUUID"},function(){return"confirm || pass"}),"/cart"===window.location.pathname&&function(){const t=new URLSearchParams(window.location.search);let o=0;var a=["rt","dep","arr","pass","promo","dur"];for(o=0;o<6;o++){let n=t.get(a[o]);$("#forwards"+(o+1)).text(n)}}();let rrf=function(){let t=Math.floor(100*Math.random())+200,o=Math.floor(88*Math.random())+11;var a="$"+t+"."+o,n="$"+(t-19)+"."+(o-11);$("#subt").text(n),$("#ttot").text(a),$("#tttot").text(a)};"/cart"===window.location.pathname&&setTimeout(function(){rrf()},700),"true"===new URLSearchParams(window.location.search).get("testing")&&setInterval(function(){window.location.reload(!0),console.log("Cold Reload Qued")},5e3);
+            TEMP.add("/view/nav.htm","#nav",{priority:1}),TEMP.add("/view/foot.htm","#foot",{priority:2}),"/"===window.location.pathname||""===window.location.pathname?TEMP.add("/view/home.htm","#tc",{priority:0}):(TEMP.add("/view"+window.location.pathname+".htm","#tc",{priority:0}),TEMP.gTitle("Monarch - ")),TEMP.repl(),TEMP.created(function(){AOS.init(),console.log("[!] Animation Que Fired")}),TEMP.force({layer:"monarch",ret:!0,vals:"09||loe",lr:"monarchUUID"},function(){return"confirm || pass"}),"/cart"===window.location.pathname&&function(){const t=new URLSearchParams(window.location.search);let o=0;var a=["rt","dep","arr","pass","promo","dur"];for(o=0;o<6;o++){let n=t.get(a[o]);$("#forwards"+(o+1)).text(n)}}();let rrf=function(){let t=Math.floor(100*Math.random())+200,o=Math.floor(88*Math.random())+11;var a="$"+t+"."+o,n="$"+(t-19)+"."+(o-11);$("#subt").text(n),$("#ttot").text(a),$("#tttot").text(a)};"/cart"===window.location.pathname&&setTimeout(function(){rrf()},700),"true"===new URLSearchParams(window.location.search).get("testing")&&setInterval(function(){window.location.reload(!0),console.log("Cold Reload Qued")},7e3);
             
         </script>
         <style>

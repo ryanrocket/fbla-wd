@@ -65,6 +65,9 @@ lib['app'].get('/api/templater.js', function(req, res) {
 lib['app'].get('/api/monarch.live.js', function(req, res) {
 	res.sendFile('./assets/monarch.live.js', { root: __dirname });
 });
+lib['app'].get('/api/monarch.cold.js', function(req, res) {
+	res.sendFile('./assets/monarch.cold.js', { root: __dirname });
+});
 lib['app'].get('/api/void.ts', function(req, res) {
 	res.sendFile('./assets/void.ts', { root: __dirname });
 });

@@ -18,3 +18,10 @@ window.console.error = (a) => {
 	Error = null;
 	return [ true, a ];
 };
+
+(function() {
+	$(document).ready(function(){
+		$('.your-class').slick({
+		});
+	  });
+})();
