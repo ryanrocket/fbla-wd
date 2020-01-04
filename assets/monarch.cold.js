@@ -19,7 +19,7 @@
 			let __c, __x = 1;
 			__c = setInterval(function() {
 
-				console['log']("[!] C_INTERATION");
+				// console['log']("[!] C_INTERATION");
 
 				let _slides = [
 					'<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="10" src="/static/neqy.png" alt="newyork" width="1000" height="530" id="fp"/>',
@@ -36,7 +36,7 @@
 
 				if(__x == 3) { __x = 0; }
 
-				console['log'](__x);
+				// console['log'](__x);
 
 			}, 5000);
 		

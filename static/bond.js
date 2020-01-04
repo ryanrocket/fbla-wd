@@ -64,7 +64,7 @@ const __BOND = {},
 		}
 	};
 	__BOND['locals'] = {
-		package: [ 'bond||self', 'require', 'npm' ],
+		package: [ 'bond||self', 'require', 'npm', 'logos' ],
 		construct: {},
 		push: function(a, b) {
 			this.package.push(a);

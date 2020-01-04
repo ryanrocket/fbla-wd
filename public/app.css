@@ -162,7 +162,8 @@ body #tc {
   padding-right: 20px;
   padding-bottom: 60px;
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   margin-bottom: 60px;
   border-bottom: 20px;
 }
@@ -1215,7 +1216,7 @@ body [universal] .table .cexpand forwards {
   color: #87f796;
   padding: 14px;
   text-align: left;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 [adverts] [ad-left]:hover {
@@ -1230,7 +1231,7 @@ body [universal] .table .cexpand forwards {
   background: #87f796;
   position: absolute;
   right: 0;
-  overflow: scroll;
+  overflow: hidden;
   top: 0;
   width: 50%;
   height: 100%;
