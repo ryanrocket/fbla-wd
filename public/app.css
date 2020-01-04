@@ -389,7 +389,7 @@ body .food {
   body .food .menu [dinertable] {
     width: 100%;
     height: 60px;
-    background: #4f9fef;
+    background: #4d98e4;
     top: 0;
     opacity: 0.8;
     z-index: 3;
@@ -629,7 +629,7 @@ body .foodbook {
   body .foodbook .menu [dinertable] {
     width: 100%;
     height: 60px;
-    background: #4f9fef;
+    background: #4d98e4;
     top: 0;
     opacity: 0.8;
     z-index: 3;
@@ -829,7 +829,7 @@ body .foodbook {
   body .foodbook .menu [dinertable] {
     width: 100%;
     height: 60px;
-    background: #4f9fef;
+    background: #4d98e4;
     top: 0;
     opacity: 0.8;
     z-index: 3;
@@ -1038,7 +1038,7 @@ head [universal] .title,
 body [universal] .title {
   width: 100%;
   height: 63px;
-  background: #4f9fef;
+  background: #4d98e4;
   color: white;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -1117,7 +1117,7 @@ body [universal] .table .cexpand forwards {
 
 .datepicker .active {
   border-radius: 0px !important;
-  background: #87f796 !important;
+  background: #7dec8b !important;
   color: #838383 !important;
   text-shadow: 0 0px 0 rgba(0, 0, 0, 0) !important;
 }
@@ -1203,7 +1203,7 @@ body [universal] .table .cexpand forwards {
 }
 
 [adverts] [ad-left] {
-  background: #4f9fef;
+  background: #4d98e4;
   position: absolute;
   left: 0;
   top: 0;
@@ -1213,7 +1213,7 @@ body [universal] .table .cexpand forwards {
   border-style: solid;
   border-right-width: 1px;
   border-width: 0;
-  color: #87f796;
+  color: #7dec8b;
   padding: 14px;
   text-align: left;
   overflow: hidden;
@@ -1228,7 +1228,7 @@ body [universal] .table .cexpand forwards {
 }
 
 [adverts] [ad-right] {
-  background: #87f796;
+  background: #7dec8b;
   position: absolute;
   right: 0;
   overflow: hidden;
@@ -1236,7 +1236,7 @@ body [universal] .table .cexpand forwards {
   width: 50%;
   height: 100%;
   border-bottom-right-radius: 10px;
-  color: #4f9fef;
+  color: #4d98e4;
   padding: 14px;
   text-align: left;
 }
@@ -1351,7 +1351,7 @@ table#t01 tr:nth-child(odd) {
 }
 
 table#t01 th {
-  background-color: #87f796;
+  background-color: #7dec8b;
   color: #757575;
   font-weight: bolder;
   text-transform: uppercase;
