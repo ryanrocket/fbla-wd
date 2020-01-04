@@ -4,7 +4,6 @@
 import time         # to manage waits
 import subprocess   # to execute git commands
 
-
 global ratio    
 ratio = 60 #in seconds
 
@@ -31,3 +30,7 @@ def run():
         continue 
 
 run();
+
+### no longer feisable
+## remove file
+#

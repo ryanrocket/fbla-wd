@@ -300,7 +300,12 @@ const AirHook = {
 		return [ true, e, f ];
 	},
 	ASSERTCSS: function(s_css_) {
-		let f = document.createStyleSheet('bar.css');
+		// tbd
+	},
+	events: {
+		bindClick: () => {
+			FOCUSTARGET([ '#airhookone' ]);
+		}
 	}
 	// TODO: Convert SEARCH function output into a div target and replace
 	//		 then return a boolean success rate

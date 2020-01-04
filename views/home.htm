@@ -1,33 +1,84 @@
 <div noscroll home>
-    <div id="logo">
+    <div ata-aos="fade-down" class="goforlogo" data-aos-duration="1000" id="logo">
         <img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="10" src="/static/neqy.png" alt="newyork" width="1000" height="530" id="fp"/>
-        
     </div>
+
+    <script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"/static/neqy.png",
+				"/static/pjet.png",
+				"/static/ipjt.png"
+			)
+		//--><!]]>
+	</script>
     
-    <div class="food">
-        <div class="menu" >
+    <div class="food hscroll"> 
+        <div class="menu hscroll
+        " >
             <div dinertable>
                 <h1 flager>Book A Flight</h1>
                 <h1 botter>East Coast</h1>
             </div>  
             <div booker>
-                <form method="POST" action="/api/book">
-                    <div abover>
+                <form autocomplete="off" method="POST" action="/api/book">
+                    <div abover> 
                         <input type="radio" name="roundtrip" value="roundtrip" checked/>
                         <span class="nc">ROUND TRIP</span>&nbsp;&nbsp;&nbsp;
                         <input type="radio" name="roundtrip" value="oneway" />
                         <span class="nc">ONE WAY</span>
                     </div>
-                    <div opt optf>
+                    <!-- html5 datalist feature -->
+                    <div opt optf id="airhookone">
                         <h3 opti>DEPARTURE</h3>
-                        <input type="text" name="dep" id="depart" maxlength="10" selr>
-                        </input>
+                        <select name="dep" autofill="no" id="depart"selr>
+                            <option value="KTPA">KTPA</option>
+                            <option value="KRIC">KRIC</option>
+                            <option value="KRDU">KRDU</option>
+                            <option value="KPIT">KPIT</option>
+                            <option value="KPHL">KPHL</option>
+                            <option value="KEWR">KEWR</option>
+                            <option value="KLGA">KLGA</option>
+                            <option value="KJFK">KJFK</option>
+                            <option value="KMIA">KMIA</option>
+                            <option value="KJAX">KJAX</option>
+                            <option value="KCAE">KCAE</option>
+                            <option value="KCLT">KCLT</option>
+                            <option value="KBOS">KBOS</option>
+                            <option value="KBWI">KBWI</option>
+                            <option value="KATL">KATL</option>
+                            <option value="KDCA">KDCA</option>
+                            <option value="KIAD">KIAD</option>
+                        </select>
                     </div>
-                    <div opt fr>
+                    <div opt fr id="airhooktwo">
                         <h3 opti>ARRIVE</h3>
-                        <input type="text" name="arr" id="arrive" maxlength="10" selr>
-
-                        </input>
+                        <select name="arr" autofill="no" id="arrive"selr>
+                                <option value="KTPA">KTPA</option>
+                                <option value="KRIC">KRIC</option>
+                                <option value="KRDU">KRDU</option>
+                                <option value="KPIT">KPIT</option>
+                                <option value="KPHL">KPHL</option>
+                                <option value="KEWR">KEWR</option>
+                                <option value="KLGA">KLGA</option>
+                                <option value="KJFK">KJFK</option>
+                                <option value="KMIA">KMIA</option>
+                                <option value="KJAX">KJAX</option>
+                                <option value="KCAE">KCAE</option>
+                                <option value="KCLT">KCLT</option>
+                                <option value="KBOS">KBOS</option>
+                                <option value="KBWI">KBWI</option>
+                                <option value="KATL">KATL</option>
+                                <option value="KDCA">KDCA</option>
+                                <option value="KIAD">KIAD</option>
+                            </select>
                     </div>
                     <div opt fr dtrf>
                         <h3 opti>DATE SELECTOR</h3>
@@ -51,7 +102,7 @@
                         </div>
                 </form>
             </div>
-            <hr>
+            <br>
             <div elp>
                 <i class="fas fa-plane fabb"></i>
                 <a href="/locations" ghelp>LOCATIONS</a>
@@ -60,9 +111,9 @@
                 <i class="fas fa-lock fabb"></i>
                 <a href="/privacy" ghelp>PRIVACY</a>
             </div>
-            <hr>
-            <div noscroll adverts class="adverts" onclick="window.location.href='/rewards'">
-                <div noscroll ad-left>
+            <br>
+            <div noscroll adverts class="adverts hscroll" onclick="window.location.href='/rewards'">
+                <div noscroll ad-left class="hscroll">
                     <h2 adhead>
                         Frequent Flyer?
                     </h2><br>
@@ -71,7 +122,7 @@
                         Pay For Future Trips!
                     </p>
                 </div>
-                <div noscroll ad-right>
+                <div noscroll ad-right class="hscroll">
                     <h2 adhead>
                         Early Check In
                     </h2> <br>

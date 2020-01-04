@@ -45,6 +45,8 @@ let io = new lib['socket.io']();
 // universal
 lib['app'].use(function(req, res, next) {
 	res.cookie('_stmp', Date.now());
+	res.header('qued', Date.now());
+	res.header('X-RWAPI', '^3.6.3 REV');
 	next();
 });
 
@@ -62,6 +64,9 @@ lib['app'].get('/api/templater.js', function(req, res) {
 });
 lib['app'].get('/api/monarch.live.js', function(req, res) {
 	res.sendFile('./assets/monarch.live.js', { root: __dirname });
+});
+lib['app'].get('/api/monarch.cold.js', function(req, res) {
+	res.sendFile('./assets/monarch.cold.js', { root: __dirname });
 });
 lib['app'].get('/api/void.ts', function(req, res) {
 	res.sendFile('./assets/void.ts', { root: __dirname });

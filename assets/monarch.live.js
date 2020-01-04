@@ -11,3 +11,17 @@
 	} else {
 	}
 })();
+
+window.console.error = (a) => {
+	window.monarch = window.monarch || [];
+	window.monarch.push({ err: a });
+	Error = null;
+	return [ true, a ];
+};
+
+(function() {
+	$(document).ready(function(){
+		$('.your-class').slick({
+		});
+	  });
+})();

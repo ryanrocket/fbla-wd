@@ -1,4 +1,4 @@
-<div universal cart>
+<div universal cart data-aos="fade-up" data-aos-duration="1000" data-aos-delay="10">
     <script>
         +(function() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -9,8 +9,9 @@
                 $('#forwards'+(i+1)).text(a);
             }
         })();
+        
     </script>
-    <div class="menu">
+    <div class="menu ccart" noscroll>
             <div class="title">
                 <sr>
                     Planned Flight
@@ -33,17 +34,24 @@
                 
                 <div class="citem">
                         &nbsp;PRICING
-                        <pricer>
-                                $228.91 &nbsp; <i class="fas fa-chevron-down"></i>
+                        <pricer id="">
+                            <span id="tttot"></span>     &nbsp; <i class="fas fa-chevron-down"></i>
                         </pricer>
                     </div>
                     <div class="cexpand">
-                        Subtotal: <forwards id="forwards">$195.78</forwards><br>
+                        Subtotal: <forwards id="forwards"><span id="subt"></span></forwards><br>
                         Discount: <forwards capat id="forwards5">loading...</forwards><br>
-                        Tax: <forwards id="forwards">$19.39</forwards><br>
-                        Total: <forwards id="forwards">$228.91</forwards><br>
+                        Tax: <forwards id="forwards">$19.11</forwards><br>
+                        Total: <forwards id="forwards"><span id="ttot"></span></forwards><br>
                     </div>
             </div>
+            <form action="https://www.paypal.com/cgi-bin/webscr" id="PPB" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="VSU2MZ4HKUTX4" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+                
         </div>
 </div>
 <script>

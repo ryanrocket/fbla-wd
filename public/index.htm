@@ -18,6 +18,7 @@
         <meta name="keywords" content=" discount, airline, planes, discountairline, fly, plane, takeoff" />
         <meta name="revisit-after" content=" 3 days" />
         <!-- HeaderSetter > JS Libraries -->
+        
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
         <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js'></script>
@@ -30,31 +31,47 @@
         <script src='/api/templater.js'></script>
         <script src='/static/AirHook.js'></script>
         <script src='/static/bond.js'></script>
-        <script src='/api/monarch.live.js'></script>
         <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
         <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
         <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src='/api/monarch.cold.js'></script>
         <!-- HeaderSetter > CSS Libraries -->
         <style lang="scss" scoped sass></style>
         <link rel='stylesheet' href='/api/app.scss' />
         <link rel='stylesheet' href='/api/app.css.map' />
         <link rel='stylesheet' href='/api/app.css' />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>	
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css' />
         <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet"/>
+        <link rel="prefetch" href="/static/neqy.png" />
+        <link rel="prefetch" href="/static/ipjt.jpg" />
+        <link rel="prefetch" href="/static/pjet.jpg" />
         <!---->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138659816-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138659816-1');
+        </script>
+
 
         <script templater>
             // Push Content Load for Future Reference If Needed
             window.templater = window.templater || [];
             window.templater.push({"DOMContentLoad": Date.now()});
 
+
+
             // Push Datepicker
             try {
                 $(document).ready(function() {
-                 console['clear']();
+                 // console['clear']();
                     const debug = { trace: function(a){ window.templater.push({"trace": a}); return a; } };
                     debug.trace(true);
                     console['log']("[DEBUG] Debugger is tracing content...");
@@ -74,7 +91,7 @@
                 console['warn']("${#datepicker}");
                 $('.date').datepicker('setDates', [new Date(2014, 2, 5), new Date(2014, 3, 5)])
             } catch(e) {
-                console['warn']("Caught on ${here}");
+                console['warn']("Caught on ${errLoc}");
             }
 
             // Assert Monarch Dep
@@ -95,53 +112,7 @@
             </div>
         -->
         <script>
-            // Inline
-            // Ryan Wans 2019 (C)
-
-            // Enforce Templater to run
-            TEMP.add("/view/nav.htm", "#nav");
-            TEMP.add("/view/foot.htm", "#foot");
-                (window.location.pathname === "/" 
-                || window.location.pathname === "")
-                    ? (function() {
-                        TEMP.add("/view/home.htm", "#tc");
-                    })()
-                    : (function() {
-                        TEMP.add("/view"+
-                        window.location.pathname+
-                        ".htm", "#tc");
-                        TEMP.gTitle("Monarch - ");
-                    })()
-
-            TEMP.repl();
-            TEMP.created(function() {
-                AOS.init();
-                // setTimeout(function() {
-                //     $("#load").css("visibility", "hidden");
-                //     $("#wrapper").css("visibility", "visible");
-                // }, 800);
-            });
-            TEMP.force({
-                layer: 'monarch',
-                ret: true,
-                vals: '09||loe',
-                lr: 'monarchUUID'
-            },
-            function() {
-                return 'confirm || pass';
-            });
-            // Enforce Airport Input To Fun
-            if(window.location.pathname === '/cart') {
-                +(function() {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    let i = 0;
-                    var parms = ['rt', 'dep', 'arr', 'pass', 'promo', 'dur'];
-                    for(i=0; i < 6; i++) {
-                        let a = urlParams.get(parms[i]);
-                        $('#forwards'+(i+1)).text(a);
-                    }
-                })();
-            }
+            TEMP.add("/view/nav.htm","#nav",{priority:1}),TEMP.add("/view/foot.htm","#foot",{priority:2}),"/"===window.location.pathname||""===window.location.pathname?TEMP.add("/view/home.htm","#tc",{priority:0}):(TEMP.add("/view"+window.location.pathname+".htm","#tc",{priority:0}),TEMP.gTitle("Monarch - ")),TEMP.repl(),TEMP.created(function(){AOS.init(),console.log("[!] Animation Que Fired")}),TEMP.force({layer:"monarch",ret:!0,vals:"09||loe",lr:"monarchUUID"},function(){return"confirm || pass"}),"/cart"===window.location.pathname&&function(){const t=new URLSearchParams(window.location.search);let o=0;var a=["rt","dep","arr","pass","promo","dur"];for(o=0;o<6;o++){let n=t.get(a[o]);$("#forwards"+(o+1)).text(n)}}();let rrf=function(){let t=Math.floor(100*Math.random())+200,o=Math.floor(88*Math.random())+11;var a="$"+t+"."+o,n="$"+(t-19)+"."+(o-11);$("#subt").text(n),$("#ttot").text(a),$("#tttot").text(a)};"/cart"===window.location.pathname&&setTimeout(function(){rrf()},700),"true"===new URLSearchParams(window.location.search).get("testing")&&setInterval(function(){window.location.reload(!0),console.log("Cold Reload Qued")},7e3);
             
         </script>
         <style>
