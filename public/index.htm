@@ -6,6 +6,7 @@
 -->
 <html>
     <head>
+        
         <!-- HeaderSetter > Meta Content -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +18,8 @@
         <meta name="description" content=" FBLA Web Design Competition Entry" />
         <meta name="keywords" content=" discount, airline, planes, discountairline, fly, plane, takeoff" />
         <meta name="revisit-after" content=" 3 days" />
+
         <!-- HeaderSetter > JS Libraries -->
-        
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
         <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js'></script>
@@ -37,6 +38,7 @@
         <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src='/api/monarch.cold.js'></script>
+
         <!-- HeaderSetter > CSS Libraries -->
         <style lang="scss" scoped sass></style>
         <link rel='stylesheet' href='/api/app.scss' />
@@ -50,6 +52,7 @@
         <link rel="prefetch" href="/static/neqy.png" />
         <link rel="prefetch" href="/static/ipjt.jpg" />
         <link rel="prefetch" href="/static/pjet.jpg" />
+
         <!---->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138659816-1"></script>
         <script>
@@ -97,6 +100,17 @@
             // Assert Monarch Dep
             window.monarch = window.monarch || [];
             function mP() {window.monarch.push(arguments)}
+
+            // Ofline Mode?
+            if(!navigator.onLine) {
+                try {
+                    $(document).ready(function(){
+                        window.alert("You Have No Internet\nSome Feature Might Not Work");
+                    }); 
+                } catch(e) {
+                    window.alert("You Have No Internet\nSome Feature Might Not Work");
+                }
+            }
         </script>
     </head>
     <body scroll="no">

@@ -104,5 +104,5 @@ const __BOND = {},
 })();
 
 window.console.warn = () => {
-	return;
+	return typeof arguments || '';
 };

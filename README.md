@@ -29,6 +29,7 @@ http://localhost:9000
 - Fast Load Time (Minimum Latency);
 - Robust File System Structure
 - Light Weight Project
+- Templating Technology
 
 ## Contributing & Licence
 If you wish to contribute to this project, please commit changes to the 'beta' branch and then create a pull request so that all changes can be reviewed.

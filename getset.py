@@ -30,7 +30,3 @@ def run():
         continue 
 
 run();
-
-### no longer feisable
-## remove file
-#
