@@ -164,6 +164,7 @@ body #tc {
   overflow-y: scroll;
   overflow-x: hidden;
   border-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 html #nav,
@@ -464,7 +465,7 @@ body .food {
     top: 0;
     border-radius: 6px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-style: solid;
     border-width: 1px;
     border-color: #80808044;
@@ -605,7 +606,7 @@ body .foodbook {
     position: absolute;
     height: 85%;
     text-align: center;
-    top: 40px;
+    top: 20px;
     margin-bottom: 40px;
   }
   html .foodbook .menu,
@@ -618,6 +619,7 @@ body .foodbook {
     text-align: center;
     position: absolute;
     margin-left: 10%;
+    margin-bottom: 20px;
     z-index: 10;
     -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
             box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
@@ -704,7 +706,7 @@ body .foodbook {
     top: 0;
     border-radius: 6px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-style: solid;
     border-width: 1px;
     border-color: #80808044;
@@ -904,7 +906,7 @@ body .foodbook {
     top: 0;
     border-radius: 6px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-style: solid;
     border-width: 1px;
     border-color: #80808044;
@@ -995,6 +997,7 @@ body [universal] {
   overflow-y: scroll;
   padding-bottom: 100px;
   overflow-x: hidden !important;
+  top: 20px !important;
 }
 
 @media screen and (min-width: 655px) {
@@ -1008,6 +1011,7 @@ body [universal] {
     border-radius: 12px;
     -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
             box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+    top: 20px !important;
   }
 }
 
@@ -1022,6 +1026,7 @@ body [universal] {
     border-radius: 12px;
     -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
             box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.205);
+    top: 20px !important;
   }
 }
 
@@ -1211,22 +1216,14 @@ body [universal] .table .cexpand forwards {
   border-style: solid;
   border-right-width: 1px;
   border-width: 0;
-  color: #7dec8b;
+  color: white;
   padding: 14px;
   text-align: left;
   overflow: hidden;
 }
 
-[adverts] [ad-left]:hover {
-  color: white;
-}
-
-[adverts] [ad-right]:hover {
-  color: #413f3f;
-}
-
 [adverts] [ad-right] {
-  background: #7dec8b;
+  background: #dddddd;
   position: absolute;
   right: 0;
   overflow: hidden;
@@ -1237,6 +1234,16 @@ body [universal] .table .cexpand forwards {
   color: #4d98e4;
   padding: 14px;
   text-align: left;
+}
+
+[adverts] [ad-left]:hover {
+  background: #458dd4;
+  color: white;
+}
+
+[adverts] [ad-right]:hover {
+  color: #4d98e4;
+  background: #ebeaea;
 }
 
 [adverts] [adhead] {

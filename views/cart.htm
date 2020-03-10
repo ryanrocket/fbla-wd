@@ -1,6 +1,15 @@
-<div universal cart data-aos="fade-up" data-aos-duration="1000" data-aos-delay="10">
+<div universal class="hscroll" cart data-aos="fade-up" data-aos-duration="1000" data-aos-delay="10">
     <script>
+        if(urlParams.toString() === "") {
+                console.log("NO PARMS");
+                $('.table').text("The Given Parameters Are Invalid! Please go back to a booking section!");
+            }
         +(function() {
+            console.log("[top 1]");
+            if(urlParams.toString() === "") {
+                console.log("NO PARMS");
+                $('.table').text("The Given Parameters Are Invalid! Please go back to a booking section!");
+            }
             const urlParams = new URLSearchParams(window.location.search);
             let i = 0;
             var parms = ['rt', 'dep', 'arr', 'pass', 'promo', 'dur'];
@@ -8,13 +17,14 @@
                 let a = urlParams.get(parms[i]);
                 $('#forwards'+(i+1)).text(a);
             }
+            
         })();
         
     </script>
     <div class="menu ccart" noscroll>
             <div class="title">
                 <sr>
-                    Planned Flight
+                    PLANNED FLIGHT
                 </sr>
             </div>
             <div class="table">
@@ -55,13 +65,27 @@
         </div>
 </div>
 <script>
+    if(urlParams.toString() === "") {
+                console.log("NO PARMS");
+                $('.table').text("The Given Parameters Are Invalid! Please go back to a booking section!");
+            }
         +(function() {
+            console.log("[top 2]");
+            if(urlParams.toString() === "") {
+                console.log("NO PARMS");
+                $('.table').text("The Given Parameters Are Invalid! Please go back to a booking section!");
+            }
             const urlParams = new URLSearchParams(window.location.search);
             let i = 0;
             var parms = ['rt', 'dep', 'arr', 'pass', 'promo', 'dur'];
             for(i=0; i < 6; i++) {
                 let a = urlParams.get(parms[i]);
                 $('#forwards'+(i+1)).text(a);
+            }
+            if(urlParams.toString() === "") {
+                console.log("NO PARMS");
+
+                $('.table').text("The Given Parameters Are Invalid! Please go back to a booking section!");
             }
         })();
     </script>
