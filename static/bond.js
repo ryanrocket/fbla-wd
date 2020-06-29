@@ -45,10 +45,16 @@ const __BOND = {},
 		return [ true, null, __BOND ];
 	};
 	let a = __BOND.push({ created: Date() });
+	var MESSAGE = "[+] Running AS-TRACK Local v1!";
+	(function(){var AS_TRACK={'getDependency': 'local-XSS-JS'}})();
 	a[0] === true
 		? !console['log']('[PRE-BORN] BOND -> Initialized')
 		: !console['warn']('[PRE-BORN] BOND -> An Error Occured During Initialization');
 	(function() {
+		console.log('\n\n%cMONARCH AIRLINES', 'color:#fff;font-family: "Open Sans", sans-serif !important;font-size:2rem;font-weight:bold;')
+		console.log('%cPowered by Express and AWS', 'color:red;font-family: "Open Sans", sans-serif !important;font-size:0.8rem;')
+		console.log('%cCreated by Ryan Wans for FBLA\n\n', 'color:red;font-family: "Open Sans", sans-serif !important;font-size:0.8rem;')
+		console['log'](MESSAGE)
 		try {
 			return [ require('require') ] || [ require('requirejs') ];
 		} catch (y) {}
@@ -64,7 +70,7 @@ const __BOND = {},
 		}
 	};
 	__BOND['locals'] = {
-		package: [ 'bond||self', 'require', 'npm', 'logos' ],
+		package: [ 'bond||self', 'require', 'npm' ],
 		construct: {},
 		push: function(a, b) {
 			this.package.push(a);
@@ -102,7 +108,3 @@ const __BOND = {},
 		}
 	};
 })();
-
-window.console.warn = () => {
-	return typeof arguments || '';
-};

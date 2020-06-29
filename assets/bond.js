@@ -45,10 +45,13 @@ const __BOND = {},
 		return [ true, null, __BOND ];
 	};
 	let a = __BOND.push({ created: Date() });
+	$MESSAGE = ""
 	a[0] === true
 		? !console['log']('[PRE-BORN] BOND -> Initialized')
 		: !console['warn']('[PRE-BORN] BOND -> An Error Occured During Initialization');
 	(function() {
+		console.log('%cMONARCH AIRLINES', 'color:blue;font-family:monospace;font-size:3rem;font-weight:bold;')
+		console['log']($MESSAGE)
 		try {
 			return [ require('require') ] || [ require('requirejs') ];
 		} catch (y) {}

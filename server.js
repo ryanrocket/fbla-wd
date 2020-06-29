@@ -1,4 +1,4 @@
-// Ryan Wans 2019 (C)
+// RYAN WANS 2019 (C)
 const lib = {},
 	plugins = [ 'express', 'fs', 'cookie-parser', 'chalk', 'path', 'body-parser', 'socket.io' ],
 	commons = {
@@ -30,6 +30,7 @@ try {
 } catch (e) {
 	throw new Error('Plugin Install Incomplete!');
 }
+console['log']("MESSAGE: ALL ASSETS BINDED!")
 
 lib['app'].use(lib['cookie-parser']());
 lib['app'].use(lib['body-parser'].json()); // to support JSON-encoded bodies
@@ -47,6 +48,10 @@ lib['app'].use(function(req, res, next) {
 	res.cookie('_stmp', Date.now());
 	res.header('qued', Date.now());
 	res.header('X-RWAPI', '^3.6.3 REV');
+	res.header('server', 'Monarch Airlines Webserver')
+	res.header('X-Powered-By', 'Monarch Airlines Webserver')
+	res.header('X-Transfer-AWS', '{from: LOADBALANCER, code: 2736ah187hs6as92h8s4672h89s4')
+	console['log']("MESSAGE: RECEIVED HIT WITH UUID "+Date.now())
 	next();
 });
 
@@ -115,9 +120,10 @@ lib['app'].post('/api/book', function(req, res) {
 
 // 404 handlr
 lib['app'].get('/*', function(req, res) {
+	console['log']("MESSAGE: USER DRAFTED 404 ERR ON "+req.path)
 	res.sendFile('./public/index.htm', { root: __dirname });
 });
 
 lib['app'].listen(9000, () => {
-	console['log']('LISTENING ON PORT 9000');
+	console['log']('-- -- MONARCH AIRLINES WEBSERVER -- --\nVERSION: v3.1\nBUILD: 12908\nRUNNING PORT 9000\n[->] RUNNING VERBOSE MODE\n-- -- -- -- -- -- -- -- -- -- -- -- --');
 });

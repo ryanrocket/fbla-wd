@@ -64,3 +64,6 @@ clean:
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
+version:
+	echo "MONARCH AIRLINES WEBSERVER VERSION v3.1.12908 (BUILD 12908)"
+
